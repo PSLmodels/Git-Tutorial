@@ -7,14 +7,14 @@
 
 - header: Git and GitHub.com Background and History
   sections:
-    - file: content/bkgrnd/GitHistory
+    - file: content/backgrnd/GitHistory
             # Define version control here, list alternative local version
             # control software, give diagrams
-    - file: content/bkgrnd/GitHubHistory
+    - file: content/backgrnd/GitHubHistory
             # Show how GitHub allows Git to be collaborative, specific
             # heirarchical permission structure, describe other platforms,
             # e.g. BitBucket, SVN.
-    - file: content/bkgrnd/GoogleDropbox
+    - file: content/backgrnd/GoogleDropbox
             # Compare and contrast Git and GitHub with Dropbox and Google Docs
 
 - header: Using Git and GitHub.com
