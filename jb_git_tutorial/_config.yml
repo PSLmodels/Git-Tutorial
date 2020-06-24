@@ -1,0 +1,37 @@
+#######################################################################################
+# Book settings
+title : Git and GitHub Use, Collaboration, and Workflow Tutorial
+author: Richard W. Evans
+logo: 'jb_git_tutorial_logo.svg'
+
+# Information about where the book exists on the web
+description: >-
+  An extensive tutorial for Git and GitHub usage, collaboration, and workflow.
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks           : cache
+
+#######################################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+#######################################################################################
+# Launch button settings
+repository:
+  url                         : https://github.com/PSLmodels/Git-Tutorial
+  path_to_book                : "jb_git_tutorial"
+
+binder:
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Launch binder"
+
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
