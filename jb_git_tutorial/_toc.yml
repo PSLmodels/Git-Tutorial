@@ -1,50 +1,27 @@
-- file: content/preface/preface
-# Discussion of PSLmodels goals, scalable collaboration, precise attribution,
-# open source ethos, heirarchical protection of code, testing, documentation,
-# best practices, harmonization of convention, ease of participation,
-# modularity, crowd sourcing contributions. Tell beginners about the learning
-# curve and the common initial perceptions. Describe wide usage.
+- file: content/intro/intro
 
-- header: Git and GitHub.com Background and History
-  sections:
-    - file: content/backgrnd/GitHistory
-            # Define version control here, list alternative local version
-            # control software, give diagrams
-    - file: content/backgrnd/GitHubHistory
-            # Show how GitHub allows Git to be collaborative, specific
-            # heirarchical permission structure, describe other platforms,
-            # e.g. BitBucket, SVN.
-    - file: content/backgrnd/GoogleDropbox
-            # Compare and contrast Git and GitHub with Dropbox and Google Docs
+- header: Git and GitHub Background and History
+- file: content/background/GitHistory
+- file: content/background/GitHubHistory
+- file: content/background/GoogleDropbox
 
-- header: Using Git and GitHub.com
-  sections:
-    - file: content/using/installing_git
-    - file: content/using/git_config
-    - file: content/using/create_GitHub_acct
-    - file: content/using/GitHubBasics
-            # Create, clone, fork, remote, branch, push, pull, pull request
-    - file: content/using/GitHubWorkflow
-            # Show diagram here and describe our particular workflow. Describe
-            # workflows that one should avoid, e.g., making changes to local
-            # master, self merge. Discribe other workflows that are not our
-            # suggested one
-    - file: content/using/MergeConflicts
-    - file: content/using/IssuePRthreads
-    - file: content/using/AdvancedGit
-            # Create branch from someone else's branch, submit pull request
-            # to someone else's branch, reset, rebase
-    - file: content/using/GitCheatSheet
+- header: Using Git and GitHub
+- file: content/using/installing_git
+- file: content/using/git_config
+- file: content/using/create_GitHub_acct
+- file: content/using/GitHubBasics
+- file: content/using/GitHubWorkflow
+- file: content/using/MergeConflicts
+- file: content/using/IssuePRthreads
+- file: content/using/AdvancedGit
+- file: content/using/GitCheatSheet
 
 - header: Open Source Repository Management
-  sections:
-    - file: content/repomgt/license
-    - file: content/repomgt/testing_CI
-    - file: content/repomgt/documentation
-            # Code documentation standards, README.md, Jupyter Book
-    - file: content/repomgt/environment
+- file: content/repomgt/license
+- file: content/repomgt/testing_CI
+- file: content/repomgt/documentation
+- file: content/repomgt/virt_env
 
 - header: Text Editor Git Configuration
-  sections:
-    - file: content/txteditor/TextEditorsIntro
-    - file: content/txteditor/VScode
+- file: content/txteditor/TextEditorsIntro
+- file: content/txteditor/VScode

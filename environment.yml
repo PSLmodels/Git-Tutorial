@@ -6,5 +6,8 @@ dependencies:
   - python>=3.7.4
   - sphinx>=2.4.4
   - pip
+  - pandas
+  - matplotlib
   - pip:
-    - jupyter-book>=0.7.0
+    - quantecon
+    - jupyter-book>=0.7.1
