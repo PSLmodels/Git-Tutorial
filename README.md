@@ -13,7 +13,7 @@ From your fork of this repository, you can generate your own version of the book
 
 ### Setting up the virtual environment
 
-The virtual environment specifications are defined in the [`environment.yml`]() file. If you have not set up the conda environment, navigate to your Git-Tutorial repository folder in your terminal on your local machine and execute the following two commands. If you have already created the
+The virtual environment specifications are defined in the [`environment.yml`]() file. If you have not set up the conda environment, navigate to your `Git-Tutorial` repository folder in your terminal on your local machine and execute the following two commands. If you have already created the conda environment, then simply activate it using the second command below (skip the first command).
 
 ```bash
 conda env create -f environment.yml
@@ -21,18 +21,18 @@ conda activate jb-git-tutorial
 ```
 
 
-## Building a Jupyter Book
+### Building a Jupyter Book
 
 Run the following command in your terminal:
 
 ```bash
-jb build mini_book/
+jb build ./jb_git_tutorial
 ```
 
 If you would like to work with a clean build, you can empty the build folder by running:
 
 ```bash
-jb clean mini_book/
+jb clean ./jb_git_tutorial
 ```
 
 If jupyter execution is cached, this command will not delete the cached folder.
@@ -40,14 +40,9 @@ If jupyter execution is cached, this command will not delete the cached folder.
 To remove the build folder (including `cached` executables), you can run:
 
 ```bash
-jb clean --all mini_book/
+jb clean --all ./jb_git_tutorial
 ```
-
-## Publishing this Jupyter Book
-
-This repository is published automatically to `gh-pages` upon `push` to the `master` branch.
 
 ## Notes
 
-This repository is used as a test case for [jupyter-book](https://github.com/executablebooks/jupyter-book) and
-a `requirements.txt` file is provided to support this `CI` application.
+Put notes here.
