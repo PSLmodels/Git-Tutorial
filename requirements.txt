@@ -1,5 +1,4 @@
 sphinx == 2.4.4
 pandas
 matplotlib
-quantecon
 jupyter-book == 0.7.1
