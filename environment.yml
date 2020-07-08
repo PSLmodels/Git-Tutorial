@@ -9,5 +9,4 @@ dependencies:
   - pandas
   - matplotlib
   - pip:
-    - quantecon
     - jupyter-book>=0.7.1
