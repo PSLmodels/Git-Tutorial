@@ -26,13 +26,13 @@ conda activate jb-git-tutorial
 Run the following command in your terminal:
 
 ```bash
-jb build ./jb_git_tutorial
+jb build ./book
 ```
 
 If you would like to work with a clean build, you can empty the build folder by running:
 
 ```bash
-jb clean ./jb_git_tutorial
+jb clean ./book
 ```
 
 If jupyter execution is cached, this command will not delete the cached folder.
@@ -40,7 +40,7 @@ If jupyter execution is cached, this command will not delete the cached folder.
 To remove the build folder (including `cached` executables), you can run:
 
 ```bash
-jb clean --all ./jb_git_tutorial
+jb clean --all ./book
 ```
 
 ## Notes

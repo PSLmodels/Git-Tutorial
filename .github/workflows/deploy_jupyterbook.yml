@@ -23,7 +23,7 @@ jobs:
       - name: Build # Build Jupyter Book
         shell: bash -l {0}
         run: |
-          cd jb_git_tutorial
+          cd book
           jb build .
 
       - name: Deploy
