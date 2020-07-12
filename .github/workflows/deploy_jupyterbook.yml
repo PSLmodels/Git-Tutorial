@@ -1,4 +1,4 @@
-name: Build and Deploy Jupyter Book docs
+name: Build and Deploy Jupyter Book
 on:
   push:
     branches:    
@@ -20,9 +20,11 @@ jobs:
           python-version: 3.7
           auto-activate-base: false
 
-      - name: Install and Build # install Sphinx and build docs
+      - name: Build # Build Jupyter Book
         shell: bash -l {0}
-        run: jb build ./jb_git_tutorial
+        run: |
+          cd jb_git_tutorial
+          jb build .
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
