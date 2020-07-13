@@ -42,7 +42,7 @@ launch_buttons:
 # Information about where the book exists on the web
 repository:
   url                    : https://github.com/PSLmodels/Git-Tutorial
-  path_to_book           : 'jb_git_tutorial'
+  path_to_book           : 'book'
 
 ####################################################
 # LaTeX information
