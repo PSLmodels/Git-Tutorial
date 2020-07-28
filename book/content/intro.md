@@ -23,7 +23,7 @@ Flow diagram of Git and GitHub workflow
 
 ## Brief definitions
 
-Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in {ref}`chap_GitHist` and {ref}`chap_GitHubHist`. But we want to give a brief reference here at the beginning. A full {ref}`chap_glossary` is included in the Appendix of the book.
+Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in {ref}`chap_GitHist` and {ref}`chap_GitHubHist`. But we want to give a brief reference here at the beginning. A full {ref}`chap_glossary` is included in the Appendix of this book.
 
 ```{admonition} Definition: Repository
 :class: note
