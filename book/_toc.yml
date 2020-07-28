@@ -26,5 +26,6 @@
 - file: content/txteditor/TextEditorsIntro
 - file: content/txteditor/VScode
 
-- header: Appendices
+- header: Appendix
 - file: content/glossary
+- file: content/bibliography
