@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Git and GitHub Tutorial Introduction &#8212; Git and GitHub Use, Collaboration, and Workflow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="History of Git" href="background/GitHistory.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/jb_git_tutorial_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Git and GitHub Use, Collaboration, and Workflow</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="#">
+   Git and GitHub Tutorial Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Git and GitHub Background and History
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="background/GitHistory.html">
+   History of Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="background/GitHubHistory.html">
+   History of GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="background/GoogleDropbox.html">
+   Git vs. Google Docs and Dropbox
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using Git and GitHub
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/installing_git.html">
+   Installing Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/git_config.html">
+   Setting up Git with git config
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/create_GitHub_acct.html">
+   Create GitHub account
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/GitHubBasics.html">
+   Git and GitHub basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/GitHubWorkflow.html">
+   Git and GitHub Collaborative Workflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/MergeConflicts.html">
+   Merge Conflicts and File Diffs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/IssuePRthreads.html">
+   Issue Threads and PR Threads
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/AdvancedGit.html">
+   Advanced Git and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/GitCheatSheet.html">
+   Git and GitHub Cheat Sheet
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Open Source Repository Management
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="repomgt/license.html">
+   Open Source License Options
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="repomgt/testing_CI.html">
+   Continuous Integration (CI) and Unit Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="repomgt/documentation.html">
+   Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="repomgt/virt_env.html">
+   Virtual Environments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Text Editor Git Configuration
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="txteditor/TextEditorsIntro.html">
+   Text Editors and Git Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="txteditor/VScode.html">
+   VS Code Git Configuration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PSLmodels/Git-Tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PSLmodels/Git-Tutorial/issues/new?title=Issue%20on%20page%20%2Fcontent/intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brief-definitions">
+   Brief definitions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wide-usage">
+   Wide usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-great-git-and-github-resources">
+   Other great Git and GitHub resources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-source-policy-simulation-library-research-and-collaboration">
+   Open source, Policy Simulation Library, research, and collaboration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline-of-book-and-exercises">
+   Outline of book and exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-authors">
+   About the authors
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="git-and-github-tutorial-introduction">
+<span id="chap-intro"></span><h1>Git and GitHub Tutorial Introduction<a class="headerlink" href="#git-and-github-tutorial-introduction" title="Permalink to this headline">¶</a></h1>
+<p>This book is published online at <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/">https://pslmodels.github.io/Git-Tutorial/</a> using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a> as its publishing engine. The source code for this book is publicly available in the GitHub repository <a class="reference external" href="https://github.com/PSLmodels/Git-Tutorial">https://github.com/PSLmodels/Git-Tutorial</a>, and users are encouraged to submit pull requests with contributions and corrections. All content is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution Non Commercial Share Alike 3.0 license</a>.</p>
+<p>This Git and GitHub tutorial grew out of training needs that constantly recurred and overlapped in our collaborative circles. We would need to train any new collaborators on <a class="reference external" href="https://github.com/PSLmodels">Policy Simulation Library</a> incubated projects on the Git and GitHub workflow we used. Since 2013, the authors have been training students, faculty, policy makers, other researchers to collaborate on research and code using Git and GitHub. Until now, the materials we would use to train our collaborators were pieced together from a number of great sources. This book represents the consolidation of those resources and our experience together in one place.</p>
+<p>Two warnings that a seasoned Git and GitHub user should always give a new entrant to this type of version control and code collaboration are the following.</p>
+<ul class="simple">
+<li><p>The learning curve is steep.</p></li>
+<li><p>The workflow initially is not intuitive.</p></li>
+</ul>
+<p>These two obstacles seem to work together to make this form of collaboration harder than the sum of their parts initially. However, once you begin collaborating on open source projects or on large-group academic or research projects, you start to see the value of all the different steps, methods, and safeguards invoved with using Git and GitHub. <a class="reference internal" href="#gitflowdiag"><span class="std std-numref">Figure 1</span></a> below is a diagram of the main pieces and actions in the primary workflow that we advocate in this book. You will notice that a version of this figure is the main image for the book and is also the <code class="docutils literal notranslate"><span class="pre">favicon</span></code> for the tabs of the web pages of the online book. This figure of a Git and GitHub workflow diagram looks complicated, but these actions will become second nature. And following this workflow will save the collaborators time in the long-run.</p>
+<div class="figure align-center" id="gitflowdiag">
+<a class="reference internal image-reference" href="../_images/GitFlowDiag.png"><img alt="../_images/GitFlowDiag.png" src="../_images/GitFlowDiag.png" style="width: 612.5px; height: 491.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Flow diagram of Git and GitHub workflow</span><a class="headerlink" href="#gitflowdiag" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="brief-definitions">
+<h2>Brief definitions<a class="headerlink" href="#brief-definitions" title="Permalink to this headline">¶</a></h2>
+<p>Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in <a class="reference internal" href="background/GitHistory.html#chap-githist"><span class="std std-ref">History of Git</span></a> and <a class="reference internal" href="background/GitHubHistory.html#chap-githubhist"><span class="std std-ref">History of GitHub</span></a>. But we want to give a brief reference here at the beginning. A full <a class="reference internal" href="glossary.html#chap-glossary"><span class="std std-ref">Glossary</span></a> is included in the Appendix of this book.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition: Repository</p>
+<p>A <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a> or “repo” is a directory containing files that are tracked by a version control system. A local repository resides on a local machine. A remote repository resides in the cloud.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Definition: Git</p>
+<p><a class="reference internal" href="glossary.html#term-git"><span class="xref std std-term">Git</span></a> is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a>. See the Git website <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a> and the <a class="reference external" href="https://en.wikipedia.org/wiki/Git">Git Wikipedia entry</a> <a class="bibtex reference internal" href="bibliography.html#gitwiki2020" id="id1">[WikipediaContributors20]</a> for more information.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Definition: GitHub</p>
+<p><a class="reference internal" href="glossary.html#term-github"><span class="xref std std-term">GitHub</span></a> or GitHub.com is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a>.</p>
+</div>
+<p>To be clear at the outset, Git is the version control software that resides on your local computer. It’s main functionalities are to track changes in the files in specified directories. But Git also has some functionality to interact with remote repositories. The ineraction between Git and GitHub creates an ideal environment and platform for scaleable collaboration on code among large teams.</p>
+</div>
+<div class="section" id="wide-usage">
+<h2>Wide usage<a class="headerlink" href="#wide-usage" title="Permalink to this headline">¶</a></h2>
+<p>Every year in November, GitHub publishes are report entitled, “The State of the Octoverse”, in which they detail the growth and developments in the GitHub community in the most recent year. The most recent <a class="reference external" href="https://github.blog/2019-11-06-the-state-of-the-octoverse-2019/">State of the Octoverse</a> was published on November 6, 2019 and covered developments from October 1, 2018 to September 30, 2019. Some interesting statistics from that report are the following.</p>
+<ul class="simple">
+<li><p>more than 40 million GitHub user accounts</p></li>
+<li><p>more than 100 million code repositories</p></li>
+</ul>
+<p>Alternatives to GitHub include <a class="reference external" href="https://about.gitlab.com/">GitLab</a>, <a class="reference external" href="https://bitbucket.org/">Bitbucket</a>. Other alternatives are documented in <a class="reference external" href="https://www.softwaretestinghelp.com/github-alternatives/">this June 2020 post</a> by Software Testing Help. But GitHub has the largest user base and largest number of repositories.</p>
+</div>
+<div class="section" id="other-great-git-and-github-resources">
+<h2>Other great Git and GitHub resources<a class="headerlink" href="#other-great-git-and-github-resources" title="Permalink to this headline">¶</a></h2>
+<p>Prior to writing this book, the authors pieced together training materials from some great resources. We highlight these resources here both to document what many of our ideas are built upon and to recommend resources that should be used concurrently with this book.</p>
+<ul class="simple">
+<li><p><em>Pro Git</em> <a class="bibtex reference internal" href="bibliography.html#chaconstraub2020" id="id2">[CS20]</a> is the free official textbook of the Git software open source project. You can access this book online at <a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a> or you can buy a hard copy from <a class="reference external" href="https://www.amazon.com/Pro-Git-Scott-Chacon/dp/1484200772?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1430218339&amp;linkCode=as2&amp;tag=git-sfconservancy-20">Amazon.com</a>. This book focuses on the documentation of the Git software and not as much on its interaction with third party repository hosting services like GitHub. <em>Pro Git</em> has translations in 13 languages besides English and has started translations in 16 other languages.</p></li>
+<li><p>QuantEcon’s “<a class="reference external" href="https://julia.quantecon.org/more_julia/version_control.html">Git, GitHub, and Version Control</a>” article <a class="bibtex reference internal" href="bibliography.html#soodetal2020" id="id3">[SPSS20]</a>. This article makes a quick run through Git setup, workflows, and merge conflicts. This article also has some nice exercises to work through at the end.</p></li>
+<li><p>Kate Hudson’s (the developer, not the actress) “<a class="reference external" href="https://github.com/k88hudson/git-flight-rules/">Flight Rules for Git</a>” is a how-to guide for actions with Git. Think of this as a Git FAQ. All the links are in the <a class="reference external" href="https://github.com/k88hudson/git-flight-rules/blob/master/README.md">README.md</a> of this GitHub repository.</p></li>
+<li><p>GitHub’s <a class="reference external" href="https://lab.github.com/">Learning Lab</a> site offers tutorials for using Git and GitHub in the form of different learning paths (sequences of tutorials) and individual tutorials.</p></li>
+<li><p><a class="reference external" href="https://www.atlassian.com/git/tutorials">Bitbucket Git tutorials</a>. Bitbucket is the next closest competitor to GitHub, so these tutorials focus on using Git to interact with Bitbucket, which is a little bit different from GitHub. However, the Git tutorials are good.</p></li>
+<li><p>Katie Sylor-Miller and Julia Evans <a class="reference external" href="https://wizardzines.com/zines/oh-shit-git/"><em>Oh Shit, Git!</em></a> is a book in which each chapter is dedicated to key mistakes a Git user will make. This playful e-book costs $10 and can be printed as a PDF. The authors have not used this book, but it looks fantastic. If you prefer or need a cleaner book title, it is also published as <a class="reference external" href="https://gumroad.com/l/dangit-git"><em>Dangit, Git!</em></a> for the same price.</p></li>
+<li><p>Data School’s Justin Markham wrote a nice web page entitled, “<a class="reference external" href="https://www.dataschool.io/how-to-contribute-on-github/">Step-by-step guide to contributing on GitHub</a>” dated June 11, 2020. This is a nice general version of what most contributor guides require. The advantages of this page are that it is highly visual and includes links to other tutorial material.</p></li>
+<li><p>The <a class="reference external" href="https://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a> by NDP Software is an interactive html page that gives the relevant git commands in the five areas of stash, workspace, index, local repository, and upstream repository, as well as how those commands flow into the other areas’ commands.</p></li>
+<li><p>This <a class="reference external" href="http://justinhileman.info/article/git-pretty/git-pretty.png">git-pretty flowchart</a> by Justin Hileman is equal parts tongue-and-cheek and realistic heuristic for deciding what to do when you have a particular problem in Git.</p></li>
+<li><p><a class="reference external" href="https://stevelosh.com/blog/2013/04/git-koans/">Git Koans</a> by Steve Losh, posted April 8, 2013.</p></li>
+</ul>
+</div>
+<div class="section" id="open-source-policy-simulation-library-research-and-collaboration">
+<h2>Open source, Policy Simulation Library, research, and collaboration<a class="headerlink" href="#open-source-policy-simulation-library-research-and-collaboration" title="Permalink to this headline">¶</a></h2>
+<p>Finish this preface with a big-picture discussion of where Git and GitHub fit in the broader open source, policy, research, collaboration setting. Discussion of PSLmodels goals, scalable collaboration, precise attribution, open source ethos, heirarchical protection of code, testing, documentation, best practices, harmonization of convention, ease of participation, modularity, crowd sourcing contributions.</p>
+</div>
+<div class="section" id="outline-of-book-and-exercises">
+<h2>Outline of book and exercises<a class="headerlink" href="#outline-of-book-and-exercises" title="Permalink to this headline">¶</a></h2>
+<p>In the online version of this book, the table of contents can be toggled to be visible or not visible by clicking on the arrow at the upper-left corner of the main text column of each page. The book is divided into six parts, each of which has sub chapters.</p>
+<p>Introduction</p>
+<ul class="simple">
+<li><p>Ch. 1: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/intro.html">Git and GitHub Tutorial Introduction</a></p></li>
+</ul>
+<p>Git and GitHub Background</p>
+<ul class="simple">
+<li><p>Ch. 2: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/background/GitHistory.html">History of Git</a></p></li>
+<li><p>Ch. 3: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/background/GitHubHistory.html">History of GitHub</a></p></li>
+<li><p>Ch. 4: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/background/GoogleDropbox.html">Git vs. Google Docs and Dropbox</a></p></li>
+</ul>
+<p>Using Git and GitHub</p>
+<ul class="simple">
+<li><p>Ch. 5: Installing Git</p></li>
+<li><p>Ch. 6: Setting up Git with git config</p></li>
+<li><p>Ch. 7: Create GitHub account</p></li>
+<li><p>Ch. 8: Git and GitHub basics</p></li>
+<li><p>Ch. 9: Git and GitHub collaborative workflow</p></li>
+<li><p>Ch. 10: Merge conflicts and file diffs</p></li>
+<li><p>Ch. 11: Issue threads and PR threads</p></li>
+<li><p>Ch. 12: Advanced Git and GitHub</p></li>
+<li><p>Ch. 13: Git and GitHub cheat sheet</p></li>
+</ul>
+<p>Open Source Repository Management</p>
+<ul class="simple">
+<li><p>Ch. 14: Open source license options</p></li>
+<li><p>Ch. 15: Continuous integration and unit testing</p></li>
+<li><p>Ch. 16: Documentation</p></li>
+<li><p>Ch. 17: Virtual environments</p></li>
+</ul>
+<p>Test Editor Git Configuration</p>
+<ul class="simple">
+<li><p>Ch. 18: Text editors and Git overview</p></li>
+<li><p>Ch. 19: VS Code Git configuration</p></li>
+</ul>
+<p>Appendix</p>
+<ul class="simple">
+<li><p>Ch. 20: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/glossary.html">Glossary</a></p></li>
+<li><p>Ch. 21: <a class="reference external" href="https://pslmodels.github.io/Git-Tutorial/content/bibliography.html">Bibliography</a></p></li>
+</ul>
+<p>The contribution of this book to the large body of Git and GitHub references is to bring together in one place the tools and specific instruction for a beginning to move up the Git learning curve as quickly as possible. This is the only resource we know of that combines Git and GitHub functionality and usage with the tools of open source repository management. This is the guide that we wish we had had when we were learning to collaborate with Git and GitHub.</p>
+<p>We have also include exercises in some of the chapters. Chapters ? have some of the most important exercises. These are meant to give the user hands on experience with the issues that often come up in collaborating with Git and GitHub.</p>
+</div>
+<div class="section" id="about-the-authors">
+<h2>About the authors<a class="headerlink" href="#about-the-authors" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://sites.google.com/site/rickecon/"><strong>Richard W. Evans</strong></a> is Advisory Board Visiting Fellow at Rice University’s <a class="reference external" href="https://www.bakerinstitute.org/">Baker Institute for Public Policy</a>. He also holds appointments as Director of the <a class="reference external" href="https://www.oselab.org/">Open Source Economics Laboratory</a>, Nonresident Fellow at the <a class="reference external" href="https://www.taxpolicycenter.org/">Tax Policy Center</a> of the Urban Institute and Brookings Institution, President of <a class="reference external" href="https://www.openrg.com/">Open Research Group, Inc.</a>, and Senior Editor at the <a class="reference external" href="https://www.thecgo.org/">Center for Growth and Opportunity</a> at Utah State University. Evans specializes in macroeconomics, public economics, and computational economics. Rick was previously Associate Director and Senior Lecturer in the <a class="reference external" href="https://macss.uchicago.edu/">M.A. Program in Computational Social Science</a> at the University of Chicago from 2016 to 2020 and a Fellow at the <a class="reference external" href="https://bfi.uchicago.edu/">Becker Friedman Institute</a> at the University of Chicago from 2016 to 2019. He was the Co-Founder and Co-Director of the BYU Macroeconomics and Computational Laboratory at Brigham Young University from 2012 to 2016. He was Assistant Professor in the BYU Economics Department from 2008 to 2016.</p>
+<p>After receiving a B.A. in economics from Brigham Young University in 1998, he began his economic career as a Research Economist at Thredgold Economic Associates in Salt Lake City, Utah, providing state and national economic analysis for Zions Bank and their operations in eight western states. Rick later received an M.A. in Public Policy from Brigham Young University in and Ph.D. in Economics from the University of Texas at Austin. He has also spent time as a researcher at the Joint Economic Committee of the U.S. Congress, the Federal Reserve Bank of Dallas, Utah Economic Council, and as an economic consultant. Rick’s current research focuses on building large-scale, open-source, dynamic general equilibrium macroeconomic models of tax policy and providing web applications and training to allow non-experts to use these models for policy analysis. Rick is a core maintainer of the <a class="reference external" href="https://github.com/PSLmodels/OG-USA">OG-USA</a> open source large-scale overlapping generations macroeconomic model of U.S. fiscal policy, and has provided macroeconomic modeling consulting services to the European Commission, World Bank, and Indian Ministry of Finance.</p>
+<p><a class="reference external" href="https://jasondebacker.com/"><strong>Jason DeBacker</strong></a> is Associate Professor in the Department of Economics at the Darla Moore School of Business at the University of South Carolina and Nonresident Fellow at the <a class="reference external" href="https://www.taxpolicycenter.org/">Tax Policy Center</a> of the Urban Institute and Brookings Institution. His research interests lie in the areas of public finance and macroeconomics. He has published papers on these topics in the <em>Journal of Financial Economics</em>, <em>Journal of
+Law and Economics</em>, the <em>Journal of Public Economics</em>, the <em>Brookings Papers on Economic Activity</em>, and other outlets. From 2009 to 2012, Jason worked as a financial economist in the Office of Tax Analysis at the U.S. Department of the Treasury. He earned a Ph.D. in economics from the University of Texas at Austin.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="background/GitHistory.html" title="next page">History of Git</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Richard W. Evans and Jason DeBacker<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
