@@ -1,31 +1,37 @@
 - file: content/intro
+  numbered: true
 
-- header: Git and GitHub Background and History
-- file: content/background/GitHistory
-- file: content/background/GitHubHistory
-- file: content/background/GoogleDropbox
+- chapter: Git and GitHub Background and History
+  sections:
+  - file: content/background/GitHistory
+  - file: content/background/GitHubHistory
+  - file: content/background/GoogleDropbox
 
-- header: Using Git and GitHub
-- file: content/using/installing_git
-- file: content/using/git_config
-- file: content/using/create_GitHub_acct
-- file: content/using/GitHubBasics
-- file: content/using/GitHubWorkflow
-- file: content/using/MergeConflicts
-- file: content/using/IssuePRthreads
-- file: content/using/AdvancedGit
-- file: content/using/GitCheatSheet
+- chapter: Using Git and GitHub
+  sections:
+  - file: content/using/installing_git
+  - file: content/using/git_config
+  - file: content/using/create_GitHub_acct
+  - file: content/using/GitHubBasics
+  - file: content/using/GitHubWorkflow
+  - file: content/using/MergeConflicts
+  - file: content/using/IssuePRthreads
+  - file: content/using/AdvancedGit
+  - file: content/using/GitCheatSheet
 
-- header: Open Source Repository Management
-- file: content/repomgt/license
-- file: content/repomgt/testing_CI
-- file: content/repomgt/documentation
-- file: content/repomgt/virt_env
+- chapter: Open Source Repository Management
+  sections:
+  - file: content/repomgt/license
+  - file: content/repomgt/testing_CI
+  - file: content/repomgt/documentation
+  - file: content/repomgt/virt_env
 
-- header: Text Editor Git Configuration
-- file: content/txteditor/TextEditorsIntro
-- file: content/txteditor/VScode
+- chapter: Text Editor Git Configuration
+  sections:
+  - file: content/txteditor/TextEditorsIntro
+  - file: content/txteditor/VScode
 
-- header: Appendix
-- file: content/glossary
-- file: content/bibliography
+- chapter: Appendix
+  sections:
+  - file: content/glossary
+  - file: content/bibliography
