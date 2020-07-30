@@ -9,4 +9,4 @@ dependencies:
   - pandas
   - matplotlib
   - pip:
-    - jupyter-book>=0.7.1
+    - jupyter-book>=0.7.3
