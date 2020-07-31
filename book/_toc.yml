@@ -1,5 +1,4 @@
 - file: content/intro
-  numbered: true
 
 - chapter: Git and GitHub Background and History
   sections:
