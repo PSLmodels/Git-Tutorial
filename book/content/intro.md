@@ -76,42 +76,8 @@ In the online version of this book, the table of contents can be toggled to be v
 
 Introduction
 
-* Ch. 1: [Git and GitHub Tutorial Introduction](https://pslmodels.github.io/Git-Tutorial/content/intro.html)
-
-Git and GitHub Background
-
-* Ch. 2: [History of Git](https://pslmodels.github.io/Git-Tutorial/content/background/GitHistory.html)
-* Ch. 3: [History of GitHub](https://pslmodels.github.io/Git-Tutorial/content/background/GitHubHistory.html)
-* Ch. 4: [Git vs. Google Docs and Dropbox](https://pslmodels.github.io/Git-Tutorial/content/background/GoogleDropbox.html)
-
-Using Git and GitHub
-
-* Ch. 5: Installing Git
-* Ch. 6: Setting up Git with git config
-* Ch. 7: Create GitHub account
-* Ch. 8: Git and GitHub basics
-* Ch. 9: Git and GitHub collaborative workflow
-* Ch. 10: Merge conflicts and file diffs
-* Ch. 11: Issue threads and PR threads
-* Ch. 12: Advanced Git and GitHub
-* Ch. 13: Git and GitHub cheat sheet
-
-Open Source Repository Management
-
-* Ch. 14: Open source license options
-* Ch. 15: Continuous integration and unit testing
-* Ch. 16: Documentation
-* Ch. 17: Virtual environments
-
-Test Editor Git Configuration
-
-* Ch. 18: Text editors and Git overview
-* Ch. 19: VS Code Git configuration
-
-Appendix
-
-* Ch. 20: [Glossary](https://pslmodels.github.io/Git-Tutorial/content/glossary.html)
-* Ch. 21: [Bibliography](https://pslmodels.github.io/Git-Tutorial/content/bibliography.html)
+```{tableofcontents}
+```
 
 The contribution of this book to the large body of Git and GitHub references is to bring together in one place the tools and specific instruction for a beginning to move up the Git learning curve as quickly as possible. This is the only resource we know of that combines Git and GitHub functionality and usage with the tools of open source repository management. This is the guide that we wish we had had when we were learning to collaborate with Git and GitHub.
 
