@@ -51,7 +51,7 @@
 <meta property="og:url"         content="https://pslmodels.github.io/Git-Tutorial/content/txteditor/VScode.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="VS Code Git Configuration" />
-<meta property="og:description" content="VS Code Git Configuration  Show how to configure VS Code to efficiently interact with Git and GitHub." />
+<meta property="og:description" content="VS Code Git Configuration  Show how to configure VS Code to efficiently interact with Git and GitHub.  Mergetool and difftool  Great article, “Using VSCode as g" />
 <meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -311,7 +311,14 @@
             <i class="fas fa-list"></i> On this page
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mergetool-and-difftool">
+   Mergetool and difftool
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -323,6 +330,22 @@
   <div class="section" id="vs-code-git-configuration">
 <span id="chap-vscode"></span><h1>VS Code Git Configuration<a class="headerlink" href="#vs-code-git-configuration" title="Permalink to this headline">¶</a></h1>
 <p>Show how to configure VS Code to efficiently interact with Git and GitHub.</p>
+<div class="section" id="mergetool-and-difftool">
+<h2>Mergetool and difftool<a class="headerlink" href="#mergetool-and-difftool" title="Permalink to this headline">¶</a></h2>
+<p>Great article, “<a class="reference external" href="https://medium.com/faun/using-vscode-as-git-mergetool-and-difftool-2e241123abe7">Using VSCode as git mergetool and difftool</a>” by Kenichi Shibata, showing <code class="docutils literal notranslate"><span class="pre">gitconfig</span></code> setup for using VS Code as your Git mergetool and difftool. He suggests adding the following lines to the <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add lines below to existing content in ~/.gitconfig file
+[merge]
+    tool = vscode
+[mergetool &quot;vscode&quot;]s
+    cmd = code --wait $MERGED
+[diff]
+    tool = vscode
+[difftool &quot;vscode&quot;]
+    cmd = code --wait --diff $LOCAL $REMOTE
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a> documentation has a section in the <a class="reference external" href="https://jupyterbook.org/content/myst.html">MyST Markdown Overview</a> chapter suggesting that if you are using VS Code to modify markdown files, you should download the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">vscode MyST markdown extension</a> that provides highlighting and other features.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
