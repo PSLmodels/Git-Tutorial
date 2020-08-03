@@ -1,6 +1,8 @@
 (chap_vscode)=
 # VS Code Git Configuration
 
+A coding text editor that has risen to the top of the ranks recently is Visual Studio Code (VS Code). It is the streamlined code editor that came out of the full-featured Visual Studio IDE (integrated development environment). VS Code is [open source](https://github.com/Microsoft/vscode) and supports a large community of extensible package add-ons. VS Code is owned and maintained by Microsoft and seems to have replaced the [Atom](https://atom.io/) text editor as its primary code-editing asset. The Atom text editor was initially developed by GitHub, Inc. But then Microsoft bought GitHub in 2018, and VS Code and its umbrella IDE of Visual Studio is Microsoft's primary coding property.
+
 Show how to configure VS Code to efficiently interact with Git and GitHub.
 
 ## Mergetool and difftool
