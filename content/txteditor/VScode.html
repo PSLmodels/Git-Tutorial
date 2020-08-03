@@ -51,7 +51,7 @@
 <meta property="og:url"         content="https://pslmodels.github.io/Git-Tutorial/content/txteditor/VScode.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="VS Code Git Configuration" />
-<meta property="og:description" content="VS Code Git Configuration  Show how to configure VS Code to efficiently interact with Git and GitHub.  Mergetool and difftool  Great article, “Using VSCode as g" />
+<meta property="og:description" content="VS Code Git Configuration  A coding text editor that has risen to the top of the ranks recently is Visual Studio Code (VS Code). It is the streamlined code edit" />
 <meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -313,6 +313,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extensions">
+   Extensions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mergetool-and-difftool">
    Mergetool and difftool
   </a>
@@ -329,7 +334,18 @@
                 
   <div class="section" id="vs-code-git-configuration">
 <span id="chap-vscode"></span><h1>VS Code Git Configuration<a class="headerlink" href="#vs-code-git-configuration" title="Permalink to this headline">¶</a></h1>
+<p>A coding text editor that has risen to the top of the ranks recently is Visual Studio Code (VS Code). It is the streamlined code editor that came out of the full-featured Visual Studio <a class="reference internal" href="../glossary.html#term-integrated-development-environment"><span class="xref std std-term">integrated development environment</span></a>. VS Code is <a class="reference external" href="https://github.com/Microsoft/vscode">open source</a> and supports a large community of extensible package add-ons. VS Code is owned and maintained by Microsoft and seems to have replaced the <a class="reference external" href="https://atom.io/">Atom</a> text editor as its primary code-editing asset. The Atom text editor was initially developed by GitHub, Inc. But then Microsoft bought GitHub in 2018, and VS Code and its umbrella IDE of Visual Studio is Microsoft’s primary coding property.</p>
+<p>You can download the VS Code editor for MacOS, Linux, or Windows operating systems from Microsoft’s <a class="reference external" href="https://code.visualstudio.com/docs/setup/setup-overview">VS Code set-up page</a>.</p>
+<div class="section" id="extensions">
+<h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>VS Code comes with many default features, one of which is some Git functionality. See the “Source Control” icon circled in <a class="reference internal" href="#vscodesourcecontrol"><span class="std std-numref">Figure 2</span></a> below.</p>
+<div class="figure align-center" id="vscodesourcecontrol">
+<a class="reference internal image-reference" href="../../_images/VScodeSourceControl.png"><img alt="../../_images/VScodeSourceControl.png" src="../../_images/VScodeSourceControl.png" style="width: 693.0px; height: 518.25px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">VS Code Source Control Action Bar Icon</span><a class="headerlink" href="#vscodesourcecontrol" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you click on the “Extensions” icon in the Activity Bar and type “Git” into the “Search Extensions in Marketplace” bar, you get a list of VS Code extensions related to Git. James Q. Quick has a great <a class="reference external" href="https://www.jamesqquick.com/blog/vscode-git-extensions-2020">recent video (April 14, 2020)</a> accompanied by a small tutorial blog post describing his favorite VS Code Git and GitHub extensions. This is how you make your VS Code text editor really be your supercharged Git and GitHub interface.</p>
 <p>Show how to configure VS Code to efficiently interact with Git and GitHub.</p>
+</div>
 <div class="section" id="mergetool-and-difftool">
 <h2>Mergetool and difftool<a class="headerlink" href="#mergetool-and-difftool" title="Permalink to this headline">¶</a></h2>
 <p>Great article, “<a class="reference external" href="https://medium.com/faun/using-vscode-as-git-mergetool-and-difftool-2e241123abe7">Using VSCode as git mergetool and difftool</a>” by Kenichi Shibata, showing <code class="docutils literal notranslate"><span class="pre">gitconfig</span></code> setup for using VS Code as your Git mergetool and difftool. He suggests adding the following lines to the <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> file.</p>
