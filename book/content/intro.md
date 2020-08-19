@@ -27,17 +27,17 @@ Before we move on with the introduction and the rest of this book, we want to gi
 
 ```{admonition} Definition: Repository
 :class: note
-A {term}`repository` or "repo" is a directory containing files that are tracked by a version control system. A local repository resides on a local machine. A remote repository resides in the cloud.
+A {term}`repository` or "repo" is a directory containing files that are tracked by a version control system. A local repository resides on a local machine. A {term}`remote` repository resides in the cloud.
 ```
 
 ```{admonition} Definition: Git
 :class: note
-{term}`Git` is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`. See the Git website [https://git-scm.com/](https://git-scm.com/) and the [Git Wikipedia entry](https://en.wikipedia.org/wiki/Git) {cite}`GitWiki2020` for more information.
+{term}`Git` is an open source {term}`distributed version control system` software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`. See the Git website [https://git-scm.com/](https://git-scm.com/) and the [Git Wikipedia entry](https://en.wikipedia.org/wiki/Git) {cite}`GitWiki2020` for more information.
 ```
 
 ```{admonition} Definition: GitHub
 :class: note
-{term}`GitHub` or GitHub.com is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`.
+{term}`GitHub` or [*GitHub.com*](https://github.com/) is a {term}`cloud` software development platform designed to enable scalable, efficient, and secure version controlled collaboration by linking {term}`local` {term}`Git` version controlled software development by developers. GitHub's main footprint is a collection of millions of version controlled code repositories. In addition, GitHub's primary features include code review, project management, {term}`continuous integration` {term}`unit testing`, {term}`GitHub Actions`, and associated web page and documentation hosting and deployment.
 ```
 
 To be clear at the outset, Git is the version control software that resides on your local computer. It's main functionalities are to track changes in the files in specified directories. But Git also has some functionality to interact with remote repositories. The ineraction between Git and GitHub creates an ideal environment and platform for scaleable collaboration on code among large teams.
@@ -62,7 +62,7 @@ Prior to writing this book, the authors pieced together training materials from 
 * Data School's Justin Markham wrote a nice web page entitled, "[Step-by-step guide to contributing on GitHub](https://www.dataschool.io/how-to-contribute-on-github/)" dated June 11, 2020. This is a nice general version of what most contributor guides require. The advantages of this page are that it is highly visual and includes links to other tutorial material.
 * The [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html) by NDP Software is an interactive html page that gives the relevant git commands in the five areas of stash, workspace, index, local repository, and upstream repository, as well as how those commands flow into the other areas' commands.
 * This [git-pretty flowchart](http://justinhileman.info/article/git-pretty/git-pretty.png) by Justin Hileman is equal parts tongue-and-cheek and realistic heuristic for deciding what to do when you have a particular problem in Git.
-* [Git Koans](https://stevelosh.com/blog/2013/04/git-koans/) by Steve Losh, posted April 8, 2013.
+* [Git Koans](https://stevelosh.com/blog/2013/04/git-koans/) by Steve Losh, posted April 8, 2013. A Koan rhetorical device from Zen Buddhism in the form of a story or dialogue that moves the listener or reader toward understanding and enlightenment. Losh's Git koans are a clever way to illustrate some of the conventions used in the Git API ({term}`application programming interface`).
 
 
 ## Open source, Policy Simulation Library, research, and collaboration

@@ -15,6 +15,7 @@
   - file: content/using/GitHubWorkflow
   - file: content/using/MergeConflicts
   - file: content/using/IssuePRthreads
+  - file: content/using/Attribution
   - file: content/using/AdvancedGit
   - file: content/using/GitCheatSheet
 
