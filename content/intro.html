@@ -53,7 +53,7 @@
 <meta property="og:description" content="Git and GitHub Tutorial Introduction  This book is published online at https://pslmodels.github.io/Git-Tutorial/ using Jupyter Book as its publishing engine. Th" />
 <meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -150,6 +150,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="using/IssuePRthreads.html">
    Issue Threads and PR Threads
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="using/Attribution.html">
+   Attribution
   </a>
  </li>
  <li class="toctree-l1">
@@ -307,7 +312,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -372,15 +377,15 @@
 <p>Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in <a class="reference internal" href="background/GitHistory.html#chap-githist"><span class="std std-ref">History of Git</span></a> and <a class="reference internal" href="background/GitHubHistory.html#chap-githubhist"><span class="std std-ref">History of GitHub</span></a>. But we want to give a brief reference here at the beginning. A full <a class="reference internal" href="glossary.html#chap-glossary"><span class="std std-ref">Glossary</span></a> is included in the Appendix of this book.</p>
 <div class="note admonition">
 <p class="admonition-title">Definition: Repository</p>
-<p>A <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a> or “repo” is a directory containing files that are tracked by a version control system. A local repository resides on a local machine. A remote repository resides in the cloud.</p>
+<p>A <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a> or “repo” is a directory containing files that are tracked by a version control system. A local repository resides on a local machine. A <a class="reference internal" href="glossary.html#term-remote"><span class="xref std std-term">remote</span></a> repository resides in the cloud.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Definition: Git</p>
-<p><a class="reference internal" href="glossary.html#term-git"><span class="xref std std-term">Git</span></a> is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a>. See the Git website <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a> and the <a class="reference external" href="https://en.wikipedia.org/wiki/Git">Git Wikipedia entry</a> <a class="bibtex reference internal" href="bibliography.html#gitwiki2020" id="id1">[WikipediaContributors20a]</a> for more information.</p>
+<p><a class="reference internal" href="glossary.html#term-git"><span class="xref std std-term">Git</span></a> is an open source <a class="reference internal" href="glossary.html#term-distributed-version-control-system"><span class="xref std std-term">distributed version control system</span></a> software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a>. See the Git website <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a> and the <a class="reference external" href="https://en.wikipedia.org/wiki/Git">Git Wikipedia entry</a> <a class="bibtex reference internal" href="bibliography.html#gitwiki2020" id="id1">[WikipediaContributors20a]</a> for more information.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Definition: GitHub</p>
-<p><a class="reference internal" href="glossary.html#term-github"><span class="xref std std-term">GitHub</span></a> or GitHub.com is an open source distributed version control software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="glossary.html#term-repository"><span class="xref std std-term">repository</span></a>.</p>
+<p><a class="reference internal" href="glossary.html#term-github"><span class="xref std std-term">GitHub</span></a> or <a class="reference external" href="https://github.com/"><em>GitHub.com</em></a> is a <a class="reference internal" href="glossary.html#term-cloud"><span class="xref std std-term">cloud</span></a> software development platform designed to enable scalable, efficient, and secure version controlled collaboration by linking <a class="reference internal" href="glossary.html#term-local"><span class="xref std std-term">local</span></a> <a class="reference internal" href="glossary.html#term-git"><span class="xref std std-term">Git</span></a> version controlled software development by developers. GitHub’s main footprint is a collection of millions of version controlled code repositories. In addition, GitHub’s primary features include code review, project management, <a class="reference internal" href="glossary.html#term-continuous-integration"><span class="xref std std-term">continuous integration</span></a> <a class="reference internal" href="glossary.html#term-unit-testing"><span class="xref std std-term">unit testing</span></a>, <a class="reference internal" href="glossary.html#term-github-actions"><span class="xref std std-term">GitHub Actions</span></a>, and associated web page and documentation hosting and deployment.</p>
 </div>
 <p>To be clear at the outset, Git is the version control software that resides on your local computer. It’s main functionalities are to track changes in the files in specified directories. But Git also has some functionality to interact with remote repositories. The ineraction between Git and GitHub creates an ideal environment and platform for scaleable collaboration on code among large teams.</p>
 </div>
@@ -406,7 +411,7 @@
 <li><p>Data School’s Justin Markham wrote a nice web page entitled, “<a class="reference external" href="https://www.dataschool.io/how-to-contribute-on-github/">Step-by-step guide to contributing on GitHub</a>” dated June 11, 2020. This is a nice general version of what most contributor guides require. The advantages of this page are that it is highly visual and includes links to other tutorial material.</p></li>
 <li><p>The <a class="reference external" href="https://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a> by NDP Software is an interactive html page that gives the relevant git commands in the five areas of stash, workspace, index, local repository, and upstream repository, as well as how those commands flow into the other areas’ commands.</p></li>
 <li><p>This <a class="reference external" href="http://justinhileman.info/article/git-pretty/git-pretty.png">git-pretty flowchart</a> by Justin Hileman is equal parts tongue-and-cheek and realistic heuristic for deciding what to do when you have a particular problem in Git.</p></li>
-<li><p><a class="reference external" href="https://stevelosh.com/blog/2013/04/git-koans/">Git Koans</a> by Steve Losh, posted April 8, 2013.</p></li>
+<li><p><a class="reference external" href="https://stevelosh.com/blog/2013/04/git-koans/">Git Koans</a> by Steve Losh, posted April 8, 2013. A Koan rhetorical device from Zen Buddhism in the form of a story or dialogue that moves the listener or reader toward understanding and enlightenment. Losh’s Git koans are a clever way to illustrate some of the conventions used in the Git API (<a class="reference internal" href="glossary.html#term-application-programming-interface"><span class="xref std std-term">application programming interface</span></a>).</p></li>
 </ul>
 </div>
 <div class="section" id="open-source-policy-simulation-library-research-and-collaboration">
@@ -433,6 +438,7 @@
 <li class="toctree-l1"><a class="reference internal" href="using/GitHubWorkflow.html">Git and GitHub Collaborative Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/MergeConflicts.html">Merge Conflicts and File Diffs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/IssuePRthreads.html">Issue Threads and PR Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using/Attribution.html">Attribution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/AdvancedGit.html">Advanced Git and GitHub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using/GitCheatSheet.html">Git and GitHub Cheat Sheet</a></li>
 </ul>
