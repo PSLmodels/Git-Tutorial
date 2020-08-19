@@ -18,11 +18,11 @@ In the rest of this chapter, we will describe the three main types of {term}`ver
 A *version control system* or version control software or VCS is software that records changes to a set of files, including the order in which the changes were made and the content of those changes, in such a way that previous versions can be recalled or restored.
 ```
 
-Version control systems take three main forms: (i) local version control systems (LCVS), (ii) centralized version control systems (CVCS), and (iii) distributed version control systems.
+Version control systems take three main forms: (i) local version control systems (LCVS), (ii) centralized version control systems (CVCS), and (iii) distributed version control systems. {cite}`WikiVCSlist2020` maintains an updated page, "[List of version-control software](https://en.wikipedia.org/wiki/List_of_version-control_software)," that provides an exhaustive list of {term}`open source` and proprietary version-control software packages categorized in each of these three types of approaches.
 
 
 ### Local version control system
-```{admonition} Definition: Local version control system (LCVS)
+```{admonition} Definition: Local version control system (LVCS)
 :class: note
 A {term}`local version control system` or LVCS is the simplest and most common approach to VCS. LVCS stores all the changes to the files in a {term}`repository` locally on the user's machine as a series of changes or deltas in the files. This is the approach taken by Apple's Time Machine backup software as most software that includes an "undo" function.
 ```
