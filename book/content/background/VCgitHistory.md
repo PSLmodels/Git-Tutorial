@@ -139,13 +139,28 @@ It became clear that no suitable alternative to BitKeeper existed, so Torvalds b
 We could not find any definitive source of an instance in which Torvalds explicitly states where the name "Git" came from and what it means. But most sources point to the Git wiki FAQ thread, "[Why the 'Git' name](https://git.wiki.kernel.org/index.php/GitFaq#Why_the_.27Git.27_name.3F)?"{cite}`GitFAQwiki2020` The most plausible origin of the name comes from a sarcastic quip by Torvalds that "Git" was named after the British slang for "pig headed or argumentative". Torvalds is quoted as saying:
 > I'm an egotistical bastard, and I name all my projects after myself. First "Linux", now "Git". --Linus Torvalds {cite}`GitFAQwiki2020`
 
+{numref}`Figure %s <GitContributors>` and {numref}`Figure %s <LinuxContributors>` below show the list of contributors, what they contributed, and when they contributed on the {term}`GitHub` {term}`source code management service`. Note that the Git source code has had 1,388 contributors over its history, and the Linux kernel has had 10,933 contributors--all using Git and GitHub to collaboratively create and improve their respective source codes.
+
+```{figure} ../../_static/lecture_specific/VCgitHistory/GitContributors.png
+---
+scale: 100%
+align: center
+name: GitContributors
+---
+Screenshot of GitHub Git source code mirror contributors ([https://github.com/git/git/graphs/contributors](https://github.com/git/git/graphs/contributors)) as of August 20, 2020
+```
+
 ```{figure} ../../_static/lecture_specific/VCgitHistory/LinuxContributors.png
 ---
 scale: 100%
 align: center
 name: LinuxContributors
 ---
-Screenshot of main Linux kernel contributors ([https://github.com/torvalds/linux/graphs/contributors](https://github.com/torvalds/linux/graphs/contributors)) as of August 19, 2020
+Screenshot of main Linux kernel contributors ([https://github.com/torvalds/linux/graphs/contributors](https://github.com/torvalds/linux/graphs/contributors)) as of August 20, 2020
 ```
 
-Describe the Linux development history. Show current number of contributors page. Show how many forks of the Linux kernel exist. This is what you need to scale up collaboration.
+We highlight two final characteristics of the Git {term}`version control system` that are fundamental to its underlying philosophy and ethos. First, git is explicitly decentralized. We will define a {term}`fork` more carefully in the chapter {ref}`chap_basics` and in the {ref}`chap_glossary`, but for now it is sufficient to say that a fork is a copy of a code {term}`repository` that is version controlled.
+
+Second, every code {term}`repository` has a rigid hierarchical structure of who has permission to accept changes to the code to provide maximum code security and order while allowing the potential of contributions from anyone. Show how many forks of the Git source code exists and explain how anyone can contribute.
+
+Git, in combination with the GitHub source code management service platform, has proven to be the best way to scale.
