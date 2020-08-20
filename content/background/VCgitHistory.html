@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Version Control and Git History &#8212; Git and GitHub Use, Collaboration, and Workflow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pslmodels.github.io/Git-Tutorial/content/background/VCgitHistory.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="History of GitHub" href="GitHubHistory.html" />
+    <link rel="prev" title="Git and GitHub Tutorial Introduction" href="../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://pslmodels.github.io/Git-Tutorial/content/background/VCgitHistory.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Version Control and Git History" />
+<meta property="og:description" content="Version Control and Git History  Definition: Git  Git is an open source distributed version control system (DVCS) software that resides on your local computer a" />
+<meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/jb_git_tutorial_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Git and GitHub Use, Collaboration, and Workflow</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Git and GitHub Tutorial Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Git and GitHub Background and History
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Version Control and Git History
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="GitHubHistory.html">
+   History of GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="GoogleDropbox.html">
+   Git vs. Google Docs and Dropbox
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Using Git and GitHub
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/installing_git.html">
+   Installing Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/git_config.html">
+   Setting up Git with git config
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/create_GitHub_acct.html">
+   Create GitHub account
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/GitHubBasics.html">
+   Git and GitHub basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/GitHubWorkflow.html">
+   Git and GitHub Collaborative Workflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/MergeConflicts.html">
+   Merge Conflicts and File Diffs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/IssuePRthreads.html">
+   Issue Threads and PR Threads
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/Attribution.html">
+   Attribution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/AdvancedGit.html">
+   Advanced Git and GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../using/GitCheatSheet.html">
+   Git and GitHub Cheat Sheet
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Open Source Repository Management
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../repomgt/license.html">
+   Open Source License Options
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../repomgt/testing_CI.html">
+   Continuous Integration (CI) and Unit Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../repomgt/documentation.html">
+   Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../repomgt/virt_env.html">
+   Virtual Environments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Text Editor Git Configuration
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../txteditor/TextEditorsIntro.html">
+   Text Editors and Git Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../txteditor/VScode.html">
+   VS Code Git Configuration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/background/VCgitHistory.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PSLmodels/Git-Tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PSLmodels/Git-Tutorial/issues/new?title=Issue%20on%20page%20%2Fcontent/background/VCgitHistory.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/PSLmodels/Git-Tutorial/edit/master/book/content/background/VCgitHistory.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control">
+   Version Control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-version-control-system">
+     Local version control system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#centralized-version-control-system">
+     Centralized version control system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributed-version-control-system">
+     Distributed version control system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#history-of-git-why-git-became-this">
+   History of Git: Why Git Became This
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#early-linux-development-1991-to-2002">
+     Early Linux development: 1991 to 2002
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-development-with-bitkeeper-2002-to-2005">
+     Linux development with BitKeeper: 2002 to 2005
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#birth-and-progress-of-git-2005-to-present">
+     Birth and progress of Git: 2005 to present
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="version-control-and-git-history">
+<span id="chap-vcgithist"></span><h1>Version Control and Git History<a class="headerlink" href="#version-control-and-git-history" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Definition: Git</p>
+<p><a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> is an <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a> <a class="reference internal" href="../glossary.html#term-distributed-version-control-system"><span class="xref std std-term">distributed version control system</span></a> (DVCS) software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a>. See the Git website <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a> and the <a class="reference external" href="https://en.wikipedia.org/wiki/Git">Git Wikipedia entry</a> <a class="bibtex reference internal" href="../bibliography.html#gitwiki2020" id="id1">[WikipediaContributors20b]</a> for more information.</p>
+</div>
+<p>Git is often confused with the term <a class="reference internal" href="../glossary.html#term-github"><span class="xref std std-term">GitHub</span></a> because the two are used together so often. But Git is simply version control software that resides on a user’s <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> machine. The back-end of Git tracks the history of changes (timing and content) to all the files you assign to be tracked using a specific method described below. The set of commands available to users through the Git API (<a class="reference internal" href="../glossary.html#term-application-programming-interface"><span class="xref std std-term">application programming interface</span></a>) is small relative to many other interfaces. But understandinng the usage of those commands is often one of the obstacles to learning Git. We have found that a visual approach to what Git is doing is valuable for gaining the intuition behind the standard workflows and API commands.</p>
+<p>In the rest of this chapter, we will describe the three main types of <a class="reference internal" href="../glossary.html#term-version-control-system"><span class="xref std std-term">version control system</span></a>s and compare and contrast Git’s approach to the other two approaches. We will then provide a short summary of how Git evolved over its history into the form it currently takes. Some other good references for what Git is and its history are <em>Pro Git</em> <a class="bibtex reference internal" href="../bibliography.html#chaconstraub2020" id="id2">[CS20]</a>, sections <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">1.1</a>, <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">1.2</a>, and <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">1.3</a>.</p>
+<div class="section" id="version-control">
+<h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Definition: Version control system</p>
+<p>A <em>version control system</em> or version control software or VCS is software that records changes to a set of files, including the order in which the changes were made and the content of those changes, in such a way that previous versions can be recalled or restored.</p>
+</div>
+<p>Version control systems take three main forms: (i) local version control systems (LCVS), (ii) centralized version control systems (CVCS), and (iii) distributed version control systems. <a class="bibtex reference internal" href="../bibliography.html#wikivcslist2020" id="id3">[WikipediaContributors20e]</a> maintains an updated page, “<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_version-control_software">List of version-control software</a>,” that provides an exhaustive list of <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a> and proprietary version-control software packages categorized in each of these three types of approaches.</p>
+<div class="section" id="local-version-control-system">
+<h3>Local version control system<a class="headerlink" href="#local-version-control-system" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition: Local version control system (LVCS)</p>
+<p>A <a class="reference internal" href="../glossary.html#term-local-version-control-system"><span class="xref std std-term">local version control system</span></a> or LVCS is the simplest and most common approach to VCS. LVCS stores all the changes to the files in a <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> locally on the user’s machine as a series of changes or deltas in the files. This is the approach taken by Apple’s Time Machine backup software as most software that includes an “undo” function.</p>
+</div>
+<p>LVCS is one step more sophisticated than do-it-yourself approach. Conceptually, LVCS is saving the set of changes to the appropriate files in separate directories of the local machine. Using these changes or deltas, LVCS can recreate the state of the repository at the point of a given snapshot by sequentially executing those deltas to the initial state of the repository or undoing those deltas from the current state of the repository.</p>
+<p><a class="reference internal" href="#lvcs"><span class="std std-numref">Figure 2</span></a> below shows an example of what an LVCS directory structure might look like. The <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> being tracked is named “directory”. The figure shows five versions of the repository as files in five corresponding version folders. The files in the <code class="docutils literal notranslate"><span class="pre">version1</span></code> folder represent the original or inital state of the repository. In the <code class="docutils literal notranslate"><span class="pre">version2</span></code> folder, you can see that both <code class="docutils literal notranslate"><span class="pre">file_A</span></code> has changed to <code class="docutils literal notranslate"><span class="pre">file_A1</span></code> and <code class="docutils literal notranslate"><span class="pre">file_C</span></code> has changed to <code class="docutils literal notranslate"><span class="pre">file_C1</span></code>. In folders <code class="docutils literal notranslate"><span class="pre">version3</span></code>, <code class="docutils literal notranslate"><span class="pre">version4</span></code>, and <code class="docutils literal notranslate"><span class="pre">version5</span></code>, more changes to the files are recorded.</p>
+<div class="figure align-center" id="lvcs">
+<a class="reference internal image-reference" href="../../_images/LVCS.png"><img alt="../../_images/LVCS.png" src="../../_images/LVCS.png" style="width: 333.5px; height: 424.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Example directory structure of local version control system (LVCS)</span><a class="headerlink" href="#lvcs" title="Permalink to this image">¶</a></p>
+</div>
+<p>An LVCS will build the files in each <code class="docutils literal notranslate"><span class="pre">version</span></code> folder by storing only the changes to each file between contiguous versions. The LVCS approach has the benefit of containing the entire history of changes to a repository on your <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> machine. And because LVCS builds a version of the <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> by storing only the changes or deltas in the files, the memory footprint of LVCS in minimized. However, LVCS has the disadvantage of not providing any good way of communicating and collaborating on the code being locally version controlled.</p>
+</div>
+<div class="section" id="centralized-version-control-system">
+<h3>Centralized version control system<a class="headerlink" href="#centralized-version-control-system" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Definition: Centralized version control system (CVCS)</p>
+<p>A <em>centralized version control system</em> or CVCS is an approach to version control in which all the files in a <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> as well as the change history (content and timing) are located on a central <a class="reference internal" href="../glossary.html#term-remote"><span class="xref std std-term">remote</span></a> server. User’s check out versions of files from the repository and check them back in, creating new change history on the central server.</p>
+</div>
+<p><a class="reference internal" href="#cvcs"><span class="std std-numref">Figure 3</span></a> below shows the workflow of a centralized version control system (CVCS). Developers A and B check files out from the remote centralized server onto their respective local machines and make changes on their local machines. The central server version updates when changes from remote users are checked back in.</p>
+<div class="figure align-center" id="cvcs">
+<a class="reference internal image-reference" href="../../_images/CVCS.png"><img alt="../../_images/CVCS.png" src="../../_images/CVCS.png" style="width: 763.5px; height: 419.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Example structure of centralized version control system (CVCS) workflow</span><a class="headerlink" href="#cvcs" title="Permalink to this image">¶</a></p>
+</div>
+<p>The centralized version control system (CVCS) approach to version control allows for collaboration among a large number of developers and does not require a large memory footprint on each developer’s <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> machine. However, remote checking out and checking in is more time consuming, and the entire history of the repository is not on each developer’s local machine.</p>
+<p>Chacon and Straub (2020, Section 1.1)<a class="bibtex reference internal" href="../bibliography.html#chaconstraub2020" id="id4">[CS20]</a> highlights a potential drawback with CVCS that the central server exposes only one point of failure. However, with current standards for <a class="reference internal" href="../glossary.html#term-cloud"><span class="xref std std-term">cloud</span></a> services backup and security, this potential weakness is largely mitigated in most cases.</p>
+</div>
+<div class="section" id="distributed-version-control-system">
+<h3>Distributed version control system<a class="headerlink" href="#distributed-version-control-system" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> software is an <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a> <a class="reference internal" href="../glossary.html#term-version-control-system"><span class="xref std std-term">version control system</span></a> software with capability designed to also operate as <a class="reference internal" href="../glossary.html#term-distributed-version-control-system"><span class="xref std std-term">distributed version control system</span></a> (DVCS) software.</p>
+<div class="note admonition">
+<p class="admonition-title">Definition: Distributed version control system (DVCS)</p>
+<p>A <em>distributed version control system</em> or DVCS is <a class="reference internal" href="../glossary.html#term-version-control-system"><span class="xref std std-term">version control system</span></a> software on any computer, <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> or <a class="reference internal" href="../glossary.html#term-remote"><span class="xref std std-term">remote</span></a>, that tracks the entire history of changes to a <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> and coordinates and organizes collaboration among multiple users through a <a class="reference internal" href="../glossary.html#term-source-code-management-service"><span class="xref std std-term">source code management service</span></a>. It is distributed in the sense that multiple <a class="reference internal" href="../glossary.html#term-clone"><span class="xref std std-term">clone</span></a>s of a single <a class="reference internal" href="../glossary.html#term-remote"><span class="xref std std-term">remote</span></a> repository have the same full history of that repository.</p>
+</div>
+<p>A distributed version control system (DVCS) puts the entire history on each user’s <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> machine upon some form of check out. The DVCS requires two components. The first component is software on all collaborating machines that tracks changes and communicates between the users’ machines. The second component is a <a class="reference internal" href="../glossary.html#term-cloud"><span class="xref std std-term">cloud</span></a> <a class="reference internal" href="../glossary.html#term-source-code-management-service"><span class="xref std std-term">source code management service</span></a> platform that coordinates collaboration among the participating users. In the case of this tutorial, the software is <a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> and the coordinating cloud platform is <a class="reference internal" href="../glossary.html#term-github"><span class="xref std std-term">GitHub</span></a>.</p>
+<p><a class="reference internal" href="#dvcs"><span class="std std-numref">Figure 4</span></a> below shows how each of three collaborating entities in the DVCS collaboration has the full set of files and the full Git history residing on their local machine. Much of the difficulty in learning <a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> comes from the commands that allow these three (or many more) independent entities to effectively transfer, track, and communicate changes among each other. A definite downside to using a DVCS like Git is the complexity involved with updating, submitting changes, merging differences, and hierarchical permissions.</p>
+<div class="figure align-center" id="dvcs">
+<a class="reference internal image-reference" href="../../_images/DVCS.png"><img alt="../../_images/DVCS.png" src="../../_images/DVCS.png" style="width: 875.0px; height: 780.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example structure of distributed version control system (DVCS) workflow</span><a class="headerlink" href="#dvcs" title="Permalink to this image">¶</a></p>
+</div>
+<p>On the positive side, the DVCS configuration is the most flexible and allows for many different workflows. It allows for a workflow that looks and behaves similarly to the CVCS workflow shown in <a class="reference internal" href="#cvcs"><span class="std std-numref">Figure 3</span></a>. But it also allows for collaborative workflows directly between users that is facilitated by the central server run by the <a class="reference internal" href="../glossary.html#term-source-code-management-service"><span class="xref std std-term">source code management service</span></a> platform.</p>
+<p>Because the entire Git history and file structure resides on each user’s <a class="reference internal" href="../glossary.html#term-local"><span class="xref std std-term">local</span></a> drive independently, the project’s files naturally have many backups. And a user can work with the project files without being connected to the internet and at the speeds of their local machine. A related drawback to DVCS systems is that the memory footprint of the project is large.</p>
+<p>Because the DVCS approach to version control is the most flexible and allows the most autonomy, it has become the most common version control method for <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a> projects, with <a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> version control software as the most widely used implementation.</p>
+<div class="warning admonition">
+<p class="admonition-title">Note: Open source irony of Git source code</p>
+<p><a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a>’s source code was once on a <a class="reference internal" href="../glossary.html#term-github"><span class="xref std std-term">GitHub</span></a> repository that was actively developed by many outside users posting issues, asking questions, and submitting code software patches through <a class="reference internal" href="../glossary.html#term-pull-request"><span class="xref std std-term">pull request</span></a>s. However, if you go to the current GitHub repository for Git’s source code (<a class="reference external" href="https://github.com/git/git">https://github.com/git/git</a>), you will find in the description of the repository that the GitHub repository is a read-only mirror of the:</p>
+<blockquote>
+<div><p>Git Source Code Mirror - This is a publish-only repository and all pull requests are ignored. Please follow Documentation/SubmittingPatches procedure for any of your improvements.</p>
+</div></blockquote>
+<p>So the Git source code is openly published, but the method of outside collaboration is limited. If you read the documentation for <a class="reference external" href="https://github.com/git/git/blob/master/Documentation/SubmittingPatches">submitting patches to Git</a>, you find that all changes by outside users are sent to the Git maintainers through the listserve. This makes the Git development DVCS workflow necessarily less distributed.</p>
+</div>
+</div>
+</div>
+<div class="section" id="history-of-git-why-git-became-this">
+<h2>History of Git: Why Git Became This<a class="headerlink" href="#history-of-git-why-git-became-this" title="Permalink to this headline">¶</a></h2>
+<p>The standard <em>Pro Git</em> book <a class="bibtex reference internal" href="../bibliography.html#chaconstraub2020" id="id5">[CS20]</a> has a chapter entitled, “<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">A Short History of Git</a>”. But a more recent article by Favell (2020) <a class="bibtex reference internal" href="../bibliography.html#favell2020" id="id6">[Fav20]</a> entitled, “<a class="reference external" href="https://www.welcometothejungle.com/en/articles/btc-history-git">The History of Git: The Road to Domination in Software Version Control</a>,” goes into more detail about Git’s rise from the early 2000’s to the present. But one also needs to know a little bit about the <a class="reference external" href="https://en.wikipedia.org/wiki/History_of_Linux">history of the Linux</a> <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a> operating system <a class="bibtex reference internal" href="../bibliography.html#linuxwiki2020" id="id7">[WikipediaContributors20c]</a> to appreciate its important role in the history of Git. The short history we present here is a synopsis that highlights why Git has the features and following that it does. We are tryin to give you evidence that you should make the investment to become a Git master.</p>
+<p>Early in the Favell (2020) article <a class="bibtex reference internal" href="../bibliography.html#favell2020" id="id8">[Fav20]</a>, he gives the following strong evidence of Git’s current dominance in the VCS (<a class="reference internal" href="../glossary.html#term-version-control-system"><span class="xref std std-term">version control system</span></a>) field.</p>
+<blockquote>
+<div><p>The best indication of Git’s market dominance is a survey of developers by Stack Overflow. This found that 88.4% of 74,298 respondents in 2018 used Git (up from 69.3% in 2015). The nearest competitors were Subversion, with 16.6% penetration (down from 36.9%); Team Foundation Version Control, with 11.3% (down from 12.2%); and Mercurial, with 3.7% (down from 7.9%). In fact, so dominant has Git become that the data scientists at Stack Overflow didn’t bother to ask the question in their 2019 survey. <a class="bibtex reference internal" href="../bibliography.html#favell2020" id="id9">[Fav20]</a></p>
+</div></blockquote>
+<div class="section" id="early-linux-development-1991-to-2002">
+<h3>Early Linux development: 1991 to 2002<a class="headerlink" href="#early-linux-development-1991-to-2002" title="Permalink to this headline">¶</a></h3>
+<p>In 1991, Linus Torvalds posted an initial version of a free operating system on an internet message board used by developers. The developer community began to take interest in this operating system, and submitted patches and changes to the source code via internet until 2002. During this time period, the version control approach of the Linux kernel could be best described as a network of <a class="reference internal" href="../glossary.html#term-local-version-control-system"><span class="xref std std-term">local version control system</span></a>s (LVCS) early on, then transitioning to a <a class="reference internal" href="../glossary.html#term-centralized-version-control-system"><span class="xref std std-term">centralized version control system</span></a> (CVCS).</p>
+<p>By the late 1990s, development of the Linux kernel as a viable operating system for broad use had greatly matured, and the number of developers and contributors had multiplied. The community of Linux developers were committed to keeping the kernel’s source code <a class="reference internal" href="../glossary.html#term-open-source"><span class="xref std std-term">open source</span></a>, but the scaling of the number of collaborators was being limited by the <a class="reference internal" href="../glossary.html#term-version-control-system"><span class="xref std std-term">version control system</span></a>s being used at the time, such as CVS and Subversion.</p>
+<p>By 2000, some of the Linux developers were using a new <a class="reference internal" href="../glossary.html#term-source-code-management-service"><span class="xref std std-term">source code management service</span></a> and accompanying version constrol system, BitKeeper <a class="bibtex reference internal" href="../bibliography.html#bitkeeperwiki2020" id="id10">[WikipediaContributors20a]</a>, because they offered free code hosting. But the software for the BitKeeper VCS tools was proprietary, which made some of the core Linux developers uncomfortable given the Linux open source license and ethic. But in 2020, Torvalds prevailed on much of the community to host the main <a class="reference internal" href="../glossary.html#term-repository"><span class="xref std std-term">repository</span></a> of the Linux source code with BitKeeper, which was a DVCS. The rationale was that the efficiencies from a mature DVCS platform would outweigh any conflict with proprietary versus open source licenses.</p>
+</div>
+<div class="section" id="linux-development-with-bitkeeper-2002-to-2005">
+<h3>Linux development with BitKeeper: 2002 to 2005<a class="headerlink" href="#linux-development-with-bitkeeper-2002-to-2005" title="Permalink to this headline">¶</a></h3>
+<p>Between 2002 and 2005 the main repository of the Linux kernel and many of its core developers were enjoying free hosting of DVCS (<a class="reference internal" href="../glossary.html#term-distributed-version-control-system"><span class="xref std std-term">distributed version control system</span></a>) collaboration and development through BitKeeper’s services. However, in 2005, a dispute between one of Linux’s developers and the CEO of BitKeeper’s parent company (who was also a Linux developer) resulted in BitKeeper revoking the Linux repository’s free status. Torvalds was torn between lack of alternative quality DVCS <a class="reference internal" href="../glossary.html#term-source-code-management-service"><span class="xref std std-term">source code management service</span></a>s and the importance of not paying for the DVCS service and having the licenses associated with those services be consistent with and not restrictive of the Linux open source license.</p>
+<p>It is worth noting the BitKeeper pioneered the <a class="reference internal" href="../glossary.html#term-distributed-version-control-system"><span class="xref std std-term">distributed version control system</span></a> approach. And it was not clear that any suitable alternatives could be found. A new DVCS system for Linux development had to be found. The <em>Pro Git</em> book cites five properties and a DVCS system had to have to satisfy the needs of the large and growing Linux development community.<a class="bibtex reference internal" href="../bibliography.html#chaconstraub2020" id="id11">[CS20]</a><a class="bibtex reference internal" href="../bibliography.html#gitwiki2020" id="id12">[WikipediaContributors20b]</a></p>
+<ul class="simple">
+<li><p>Speed</p></li>
+<li><p>Simple design</p></li>
+<li><p>Strong support for non-linear development (thousands of parallel <a class="reference internal" href="../glossary.html#term-branch"><span class="xref std std-term">branch</span></a>es)</p></li>
+<li><p>Fully distributed</p></li>
+<li><p>Able to handle large projects like the Linux kernel efficiently (spped and data size)</p></li>
+<li><p>Include very strong safeguards against corruption, either accidental or malicious</p></li>
+</ul>
+</div>
+<div class="section" id="birth-and-progress-of-git-2005-to-present">
+<h3>Birth and progress of Git: 2005 to present<a class="headerlink" href="#birth-and-progress-of-git-2005-to-present" title="Permalink to this headline">¶</a></h3>
+<p>It became clear that no suitable alternative to BitKeeper existed, so Torvalds began development of his own DVCS called “Git” on April 3, 2005.</p>
+<blockquote>
+<div><p>The development of <a class="reference internal" href="../glossary.html#term-git"><span class="xref std std-term">Git</span></a> began on 3 April 2005. Torvalds announced the project on 6 April and became self-hosting the next day. The first merge of multiple branches took place on 18 April. Torvalds achieved his performance goals; on 29 April, the nascent Git was benchmarked recording patches to the Linux kernel tree at the rate of 6.7 patches per second. On 16 June, Git managed the kernel 2.6.12 release.<a class="bibtex reference internal" href="../bibliography.html#gitwiki2020" id="id13">[WikipediaContributors20b]</a></p>
+</div></blockquote>
+<p>We could not find any definitive source of an instance in which Torvalds explicitly states where the name “Git” came from and what it means. But most sources point to the Git wiki FAQ thread, “<a class="reference external" href="https://git.wiki.kernel.org/index.php/GitFaq#Why_the_.27Git.27_name.3F">Why the ‘Git’ name</a>?”<a class="bibtex reference internal" href="../bibliography.html#gitfaqwiki2020" id="id14">[GitWContributors20]</a> The most plausible origin of the name comes from a sarcastic quip by Torvalds that “Git” was named after the British slang for “pig headed or argumentative”. Torvalds is quoted as saying:</p>
+<blockquote>
+<div><p>I’m an egotistical bastard, and I name all my projects after myself. First “Linux”, now “Git”. –Linus Torvalds <a class="bibtex reference internal" href="../bibliography.html#gitfaqwiki2020" id="id15">[GitWContributors20]</a></p>
+</div></blockquote>
+<div class="figure align-center" id="linuxcontributors">
+<a class="reference internal image-reference" href="../../_images/LinuxContributors.png"><img alt="../../_images/LinuxContributors.png" src="../../_images/LinuxContributors.png" style="width: 762.0px; height: 713.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Screenshot of main Linux kernel contributors (<a class="reference external" href="https://github.com/torvalds/linux/graphs/contributors">https://github.com/torvalds/linux/graphs/contributors</a>) as of August 19, 2020</span><a class="headerlink" href="#linuxcontributors" title="Permalink to this image">¶</a></p>
+</div>
+<p>Describe the Linux development history. Show current number of contributors page. Show how many forks of the Linux kernel exist. This is what you need to scale up collaboration.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/background"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Git and GitHub Tutorial Introduction</a>
+    <a class='right-next' id="next-link" href="GitHubHistory.html" title="next page">History of GitHub</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Richard W. Evans and Jason DeBacker<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
