@@ -136,6 +136,9 @@ It is worth noting the BitKeeper pioneered the {term}`distributed version contro
 It became clear that no suitable alternative to BitKeeper existed, so Torvalds began development of his own DVCS called "Git" on April 3, 2005.
 > The development of {term}`Git` began on 3 April 2005. Torvalds announced the project on 6 April and became self-hosting the next day. The first merge of multiple branches took place on 18 April. Torvalds achieved his performance goals; on 29 April, the nascent Git was benchmarked recording patches to the Linux kernel tree at the rate of 6.7 patches per second. On 16 June, Git managed the kernel 2.6.12 release.{cite}`GitWiki2020`
 
+We could not find any definitive source of an instance in which Torvalds explicitly states where the name "Git" came from and what it means. But most sources point to the Git wiki FAQ thread, "[Why the 'Git' name](https://git.wiki.kernel.org/index.php/GitFaq#Why_the_.27Git.27_name.3F)?"{cite}`GitFAQwiki2020` The most plausible origin of the name comes from a sarcastic quip by Torvalds that "Git" was named after the British slang for "pig headed or argumentative". Torvalds is quoted as saying:
+> I'm an egotistical bastard, and I name all my projects after myself. First "Linux", now "Git". --Linus Torvalds {cite}`GitFAQwiki2020`
+
 ```{figure} ../../_static/lecture_specific/VCgitHistory/LinuxContributors.png
 ---
 scale: 100%
