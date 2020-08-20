@@ -23,7 +23,7 @@ Flow diagram of Git and GitHub workflow
 
 ## Brief definitions
 
-Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in {ref}`chap_GitHist` and {ref}`chap_GitHubHist`. But we want to give a brief reference here at the beginning. A full {ref}`chap_glossary` is included in the Appendix of this book.
+Before we move on with the introduction and the rest of this book, we want to give the reader a quick reference, definition, and comparison of Git and GitHub. We will spend entire chapters on these two topics in {ref}`chap_VCgitHist` and {ref}`chap_GitHubHist`. But we want to give a brief reference here at the beginning. A full {ref}`chap_glossary` is included in the Appendix of this book.
 
 ```{admonition} Definition: Repository
 :class: note
@@ -32,7 +32,7 @@ A {term}`repository` or "repo" is a directory containing files that are tracked 
 
 ```{admonition} Definition: Git
 :class: note
-{term}`Git` is an open source {term}`distributed version control system` software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`. See the Git website [https://git-scm.com/](https://git-scm.com/) and the [Git Wikipedia entry](https://en.wikipedia.org/wiki/Git) {cite}`GitWiki2020` for more information.
+{term}`Git` is an {term}`open source` {term}`distributed version control system` (DVCS) software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`. See the Git website [https://git-scm.com/](https://git-scm.com/) and the [Git Wikipedia entry](https://en.wikipedia.org/wiki/Git) {cite}`GitWiki2020` for more information.
 ```
 
 ```{admonition} Definition: GitHub

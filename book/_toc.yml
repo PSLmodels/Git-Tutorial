@@ -2,7 +2,7 @@
 
 - chapter: Git and GitHub Background and History
   sections:
-  - file: content/background/GitHistory
+  - file: content/background/VCgitHistory
   - file: content/background/GitHubHistory
   - file: content/background/GoogleDropbox
 
