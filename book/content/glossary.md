@@ -38,6 +38,9 @@ continuous integration
 distributed version control system
   A *distributed version control system* or DVCS is {term}`version control system` software on any computer, {term}`local` or {term}`remote`, that tracks the entire history of changes to a {term}`repository` and coordinates and organizes collaboration among multiple users. It is distributed in the sense that multiple {term}`clone`s of a single {term}`remote` repository have the same full history of that repository.
 
+Dropbox
+  TODO: define Dropbox
+
 fork
   TODO: define fork
 
@@ -49,6 +52,12 @@ GitHub
 
 GitHub actions
   GitHub actions
+
+Google Doc
+  TODO: define Google Doc
+
+Google Drive
+  TODO: define Google Drive
 
 graphical user interface
   A graphical user interface or GUI...
