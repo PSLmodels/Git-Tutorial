@@ -11,6 +11,9 @@ benevolent dictator
 Bitbucket
   *Bitbucket* or [*Bitbucket.org*](https://bitbucket.org/) is a {term}`cloud` {term}`source code management service` platform designed to enable scalable, efficient, and secure version controlled collaboration by linking {term}`local` {term}`Git` version controlled software development by developers.
 
+Bitkeeper
+  TODO: Put Bitkeeper definition here...
+
 branch
   TODO: define branch
 
@@ -42,16 +45,19 @@ Git
   *Git* is {term}`open source` {term}`version control system` software with capability designed to also operate as {term}`distributed version control system` (DVCS) software that resides on your local computer and tracks changes and the history of changes to all the files in a directory or {term}`repository`. See the Git website [https://git-scm.com/](https://git-scm.com/) and the [Git Wikipedia entry](https://en.wikipedia.org/wiki/Git) {cite}`GitWiki2020` for more information.
 
 GitHub
-  *GitHub* or [*GitHub.com*](https://github.com/) is a {term}`cloud` {term}`source code management service` platform designed to enable scalable, efficient, and secure version controlled collaboration by linking {term}`local` {term}`Git` version controlled software development by users. *GitHub*'s main business footprint is hosting a collection of millions of version controlled code repositories. In addition to DVCS, *GitHub*'s primary features include code review, project management, {term}`continuous integration` {term}`unit testing`, {term}`GitHub Actions`, and associated web page and documentation hosting and deployment.
+  *GitHub* or [*GitHub.com*](https://github.com/) is a {term}`cloud` {term}`source code management service` platform designed to enable scalable, efficient, and secure version controlled collaboration by linking {term}`local` {term}`Git` version controlled software development by users. *GitHub*'s main business footprint is hosting a collection of millions of version controlled code repositories. In addition to being a platform for {term}`distributed version control system` (DVCS), *GitHub*'s primary features include code review, project management, {term}`continuous integration` {term}`unit testing`, {term}`GitHub actions`, and associated web page (GitHub pages) and documentation hosting and deployment.
 
-GitHub Actions
-  GitHub Actions
+GitHub actions
+  GitHub actions
 
 graphical user interface
   A graphical user interface or GUI...
 
 integrated development environment
   Integrated development environment or IDE is a software application that comsolidates many of the functions of software development under one program. IDE's often include a code editor, object memory and identification, debugger, and build automation tools. (See [IDE Wikipedia entry](https://en.wikipedia.org/wiki/Integrated_development_environment) {cite}`GitIDE2020`.)
+
+Linux
+  TODO: write Linux description...
 
 local
   *Local* is a descriptor that refers to files that reside or operations that are performed on a user's machine to which he or she has direct access without using the internet.
