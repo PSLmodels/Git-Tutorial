@@ -4,9 +4,11 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7.7
-  - sphinx>=2.4.4
+  - scipy>=1.5.0
+  - pandas>=1.0.5
+  - bokeh>=2.1.1
+  - sphinx>=3.1.2
   - pip
-  - pandas
   - matplotlib
   - pip:
-    - jupyter-book==0.7.3
+    - jupyter-book==0.7.4
