@@ -14,6 +14,9 @@ Bitbucket
 Bitkeeper
   TODO: Put Bitkeeper definition here...
 
+Box, Inc.
+  TODO: Box Inc. definition... University file sharing company...
+
 branch
   TODO: define branch
 
@@ -53,8 +56,11 @@ GitHub
 GitHub actions
   GitHub actions
 
-Google Doc
-  TODO: define Google Doc
+GitLab
+  TODO: define *GitLab*...
+
+Google Docs
+  TODO: define Google Docs
 
 Google Drive
   TODO: define Google Drive
