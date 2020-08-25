@@ -1,13 +1,13 @@
 - file: content/intro
 
-- chapter: Git and GitHub Background and History
-  sections:
+- part: Git and GitHub Background and History
+  chapters:
   - file: content/background/VCgitHistory
   - file: content/background/GitHubHistory
   - file: content/background/GoogleDropboxBox
 
-- chapter: Using Git and GitHub
-  sections:
+- part: Using Git and GitHub
+  chapters:
   - file: content/using/installing_git
   - file: content/using/git_config
   - file: content/using/create_GitHub_acct
@@ -19,19 +19,19 @@
   - file: content/using/AdvancedGit
   - file: content/using/GitCheatSheet
 
-- chapter: Open Source Repository Management
-  sections:
+- part: Open Source Repository Management
+  chapters:
   - file: content/repomgt/license
   - file: content/repomgt/testing_CI
   - file: content/repomgt/documentation
   - file: content/repomgt/virt_env
 
-- chapter: Text Editor Git Configuration
-  sections:
+- part: Text Editor Git Configuration
+  chapters:
   - file: content/txteditor/TextEditorsIntro
   - file: content/txteditor/VScode
 
-- chapter: Appendix
-  sections:
+- part: Appendix
+  chapters:
   - file: content/glossary
   - file: content/bibliography
