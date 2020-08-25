@@ -11,5 +11,5 @@ scale: 50%
 align: center
 name: xkcd_git
 ---
-Take from [xkcd.com](https://xkcd.com/), comic [1597](https://xkcd.com/1597/)
+The "burn down" method is for newbies, taken from [xkcd.com](https://xkcd.com/), comic [1597](https://xkcd.com/1597/)
 ```
