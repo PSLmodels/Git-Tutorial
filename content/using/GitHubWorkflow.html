@@ -1,30 +1,50 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git and GitHub Collaborative Workflow &#8212; Git and GitHub Use, Collaboration, and Workflow</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -39,15 +59,15 @@
     <link rel="next" title="Merge Conflicts and File Diffs" href="MergeConflicts.html" />
     <link rel="prev" title="Git and GitHub basics" href="GitHubBasics.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://pslmodels.github.io/Git-Tutorial/content/using/GitHubWorkflow.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Git and GitHub Collaborative Workflow" />
-<meta property="og:description" content="Git and GitHub Collaborative Workflow  Show diagram here and describe our particular workflow. Describe workflows that one should avoid, e.g., making changes to" />
+<meta property="og:description" content="Git and GitHub Collaborative Workflow  Git and GitHub can be a lot to wrap one’s head around at the beginning.  There’s a lot of new jargon and one can get lost" />
 <meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -71,22 +91,19 @@
   <h1 class="site-logo" id="site-title">Git and GitHub Use, Collaboration, and Workflow</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Git and GitHub Tutorial Introduction
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Git and GitHub Background and History
  </span>
@@ -108,7 +125,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Using Git and GitHub
  </span>
@@ -165,7 +182,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Open Source Repository Management
  </span>
@@ -192,7 +209,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Text Editor Git Configuration
  </span>
@@ -209,7 +226,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Appendix
  </span>
@@ -227,9 +244,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -258,11 +273,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -274,8 +289,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -299,7 +314,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -308,12 +324,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -323,7 +334,21 @@
                 
   <div class="section" id="git-and-github-collaborative-workflow">
 <span id="chap-workflow"></span><h1>Git and GitHub Collaborative Workflow<a class="headerlink" href="#git-and-github-collaborative-workflow" title="Permalink to this headline">¶</a></h1>
-<p>Show diagram here and describe our particular workflow. Describe workflows that one should avoid, e.g., making changes to local master, self merge. Discribe other workflows that are not our suggested one. Give justifications for this workflow.</p>
+<p>Git and GitHub can be a lot to wrap one’s head around at the beginning.  There’s a lot of new jargon and one can get lost thinking about the various places that version of the files of kept (locally, in the <code class="docutils literal notranslate"><span class="pre">origin</span></code> repo, in the <code class="docutils literal notranslate"><span class="pre">upstream</span></code> repo).  To help with this, we’ll step through the typical GitHub workflow followed by most projects in the Policy Simulation Library.  Throughout this, we’ll reference the diagram below, which provides a visual representation of the GitHub workflow described.</p>
+<p><img alt="Git Diagram" src="../../_images/GitFlowDiag1.png" /></p>
+<p>We begin assuming that you have installed and configured Git on  your machine and setup a GitHub account.  Now assume that you want to start working with a project at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/project</span></code>.  The step-by-step approach to this is as follows:</p>
+<ol class="simple">
+<li><p>Make a fork of the main repository.  To do this, you navigate to the GitHub repository of the project, <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/project</span></code> and click “Fork” in the top right of the screen.  Select the destination for the fork (which you will probably want to be your GitHub profile).  This will create a copy of the project on the Internet at <code class="docutils literal notranslate"><span class="pre">https://github.com/yourname/project</span></code>.  We will refer to <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/project</span></code> as the “upstream” repository and your fork, <code class="docutils literal notranslate"><span class="pre">https://github.com/yourname/project</span></code>, as the “origin” repository.</p></li>
+<li><p>Make a copy of the new fork on your local machine.  To do this, you will click on the green “Code” button on the webpage of your fork.  Copy that url that is shown there.  Next, open your command prompt/terminal on your computer and navigate to a directory where you would like to save this repository.  Once there, type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/username/project.git</span></code>, where the url is what you just copied and pasted into your terminal.  Hit “return” and you will see the files being downloaded onto your computer into a new folder called <code class="docutils literal notranslate"><span class="pre">project</span></code>.  Now you have a copy of all the files for the project on your computer and are ready to work with them.</p></li>
+<li><p>Once ready to start editing files, we’ll want to create a new branch to work on.  Note that once you cloned the repository, one branch was created, this one is called <code class="docutils literal notranslate"><span class="pre">master</span></code> (or <code class="docutils literal notranslate"><span class="pre">main</span></code>).  We want to keep the <code class="docutils literal notranslate"><span class="pre">master</span></code>/<code class="docutils literal notranslate"><span class="pre">main</span></code> branch synced to the upstream repository, ensuring that it has tested, working code.  We can create a new branch off of the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch by (1) ensuring we are on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch with the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code> and then (2) checking out a new branch with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">new_branch_name</span></code>.</p></li>
+<li><p>If sometime has gone by since we got files from the upstream branch, we can check to make sure we have the latest files by doing a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span></code>.</p></li>
+<li><p>After fetching the changes, we can add them to our local files with the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">upstream/master</span></code>.</p></li>
+<li><p>If changes were found, we can also sync our remote fork with a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">branch_name</span></code>.</p></li>
+<li><p>Once we make edits to local files, we will want to add our changes to the Git history.  We do this by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">path/filename</span></code>.</p></li>
+<li><p>After adding our changes to the history, we will want to commit them so that they are included in our next push to the remote repository.  Do this by <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">path/filename</span></code>.</p></li>
+<li><p>When we have made some set of changes, we may want to push them to our remote fork to (1) back them up, (2) more easily share them with others, and/or (3) to set up a Pull Request to change the code in the upstream repository.  Do do this, we’ll do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">new_branch_name</span></code>.</p></li>
+<li><p>After we’ve made all the changes we want to the code base (which may entail cycling through steps 4-9 several times), we will want to open a pull request.  The easiest way to do this is to navigate to the upstream repo at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/project</span></code>, then click on the “Pull requests” tab.  If you have pushed your changes to your origin, you should see a green button that says “Compare &amp; pull request”.  Click then to open a pull request.  Enter a descriptive title and more description in the dialogue box below. This will help project maintainers understand and review your code changes.  If everything looks good, it’ll get merged into the code base.  If not, maintainers will offer helpful feedback to address any issues and you can revise the code by committing and pushing new changes as in steps 7-9.</p></li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -374,7 +399,10 @@
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
   </body>
 </html>

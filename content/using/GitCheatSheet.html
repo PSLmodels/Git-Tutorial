@@ -1,30 +1,50 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git and GitHub Cheat Sheet &#8212; Git and GitHub Use, Collaboration, and Workflow</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -39,15 +59,15 @@
     <link rel="next" title="Open Source License Options" href="../repomgt/license.html" />
     <link rel="prev" title="Advanced Git and GitHub" href="AdvancedGit.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://pslmodels.github.io/Git-Tutorial/content/using/GitCheatSheet.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Git and GitHub Cheat Sheet" />
-<meta property="og:description" content="Git and GitHub Cheat Sheet  Create a cheat sheet of the most common commands and operations (and some of the less common ones)." />
+<meta property="og:description" content="Git and GitHub Cheat Sheet  About 99% of the commands you’ll type in git are summarized in the table below:      Functionality  Git Command  See active branch a" />
 <meta property="og:image"       content="https://pslmodels.github.io/Git-Tutorial/_static/jb_git_tutorial_logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -71,22 +91,19 @@
   <h1 class="site-logo" id="site-title">Git and GitHub Use, Collaboration, and Workflow</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Git and GitHub Tutorial Introduction
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Git and GitHub Background and History
  </span>
@@ -108,7 +125,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Using Git and GitHub
  </span>
@@ -165,7 +182,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Open Source Repository Management
  </span>
@@ -192,7 +209,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Text Editor Git Configuration
  </span>
@@ -209,7 +226,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption collapsible-parent">
  <span class="caption-text">
   Appendix
  </span>
@@ -227,9 +244,7 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
@@ -258,11 +273,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -274,8 +289,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -299,7 +314,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -308,12 +324,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -323,7 +334,55 @@
                 
   <div class="section" id="git-and-github-cheat-sheet">
 <span id="chap-cheatsheet"></span><h1>Git and GitHub Cheat Sheet<a class="headerlink" href="#git-and-github-cheat-sheet" title="Permalink to this headline">¶</a></h1>
-<p>Create a cheat sheet of the most common commands and operations (and some of the less common ones).</p>
+<p>About 99% of the commands you’ll type in <code class="docutils literal notranslate"><span class="pre">git</span></code> are summarized in the table below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Functionality</p></th>
+<th class="head"><p>Git Command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>See active branch and uncommitted changes for tracked files</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span> <span class="pre">-uno</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Change branch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&lt;branch</span> <span class="pre">name&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Create new branch and change to it</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">&lt;new</span> <span class="pre">branch</span> <span class="pre">name&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Track file or latest changes to file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">&lt;filename&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Commit changes to branch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;message</span> <span class="pre">describing</span> <span class="pre">changes&quot;</span> </code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Push committed changes to remote branch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">&lt;branch</span> <span class="pre">name&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Merge changes from master into development branch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(change</span> <span class="pre">working</span> <span class="pre">branch</span> <span class="pre">to</span> <span class="pre">master,</span> <span class="pre">then…)</span> <span class="pre">git</span> <span class="pre">merge</span> <span class="pre">&lt;branch</span> <span class="pre">name&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Merge changes from development branch into master</p></td>
+<td><p>(change to development branch, then…) <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">master</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>List current tags</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Create a new tag</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">v&lt;version</span> <span class="pre">number&gt;</span> <span class="pre">-m</span> <span class="pre">&quot;message</span> <span class="pre">with</span> <span class="pre">new</span> <span class="pre">tag&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Pull changes from remote repo onto local machine</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Merge changes from remote into active local branch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">upstream/&lt;branch</span> <span class="pre">name&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Clone a remote repository</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;url</span> <span class="pre">to</span> <span class="pre">remote</span> <span class="pre">repo&gt;</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
     <script type="text/x-thebe-config">
@@ -374,7 +433,10 @@
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
   </body>
 </html>
