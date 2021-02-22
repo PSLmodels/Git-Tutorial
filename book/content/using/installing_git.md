@@ -1,4 +1,4 @@
 (chap_installgit)=
 # Installing Git
 
-Give instruction for verifying whether Git is installed on your local machine, which version, and how to update it.
+Detailed instructions to install Git are provided at the [Git-SCM website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).

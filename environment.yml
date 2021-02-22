@@ -3,7 +3,7 @@ channels:
   - default
   - conda-forge
 dependencies:
-  - python=3.7.7
+  - python>=3.7.7
   - scipy>=1.5.0
   - pandas>=1.0.5
   - bokeh>=2.1.1
@@ -11,4 +11,4 @@ dependencies:
   - pip
   - matplotlib
   - pip:
-    - jupyter-book==0.7.4
+    - jupyter-book>=0.7.4

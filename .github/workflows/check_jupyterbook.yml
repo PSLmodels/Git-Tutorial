@@ -1,11 +1,8 @@
-name: Build and Deploy Jupyter Book
-on:
-  push:
-    branches:
-      - master
+name: Test that Jupyter Book builds
+on: [push, pull_request]
+
 jobs:
   build-and-deploy:
-    if: github.repository == 'PSLmodels/Git-Tutorial'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,7 +11,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Miniconda
-        uses: goanpeca/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: jb-git-tutorial
           environment-file: environment.yml
@@ -24,12 +21,4 @@ jobs:
       - name: Build # Build Jupyter Book
         shell: bash -l {0}
         run: |
-          cd book
-          jb build .
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: book/_build/html # The folder the action should deploy.
+          jb build ./book
