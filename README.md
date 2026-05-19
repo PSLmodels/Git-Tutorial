@@ -1,7 +1,7 @@
 [![PSL incubating](https://img.shields.io/badge/PSL-incubating-ff69b4.svg)](https://www.PSLmodels.org)
 
-# <img src="https://raw.githubusercontent.com/PSLmodels/Git-Tutorial/master/book/_static/logo/jb_git_tutorial_logo.png" width=40 /> Git and GitHub Use, Collaboration, and Workflow (*IN PROGRESS*)
-This repository houses the source code and content files for the open access, *Git and GitHub Use, Collaboration, and Workflow* book tutorial and training that many contributors to the [PSLmodels](https://github.com/PSLmodels) community use. This project uses [Jupyter Book](https://jupyterbook.org/intro.html) 0.7.3 to create the HTML and Jupyter notebook forms of the tutorial. This public GitHub repository hosts all the source code for the book, and the compiled Jupyter book is available at the GitHub page for this repository [https://pslmodels.github.io/Git-Tutorial](https://pslmodels.github.io/Git-Tutorial), up to the most recent commit to the master branch. We hope to add tutorial videos at some point in the future. This project is maintained by [Richard W. Evans](https://sites.google.com/site/rickecon/) and [Jason DeBacker](https://www.jasondebacker.com/).
+# <img src="https://raw.githubusercontent.com/PSLmodels/Git-Tutorial/master/book/_static/logo/jb_git_tutorial_logo.png" width=40 /> Git and GitHub Use, Collaboration, and Workflow
+This repository houses the source code and content files for the open access, *Git and GitHub Use, Collaboration, and Workflow* book tutorial and training used by many contributors in the [PSLmodels](https://github.com/PSLmodels) community. This project uses [Jupyter Book](https://jupyterbook.org/intro.html) to create the published HTML version of the tutorial. The source lives in this GitHub repository, and the compiled book is available at [https://pslmodels.github.io/Git-Tutorial](https://pslmodels.github.io/Git-Tutorial). This project is maintained by [Richard W. Evans](https://sites.google.com/site/rickecon/) and [Jason DeBacker](https://www.jasondebacker.com/).
 
 
 ## Contributing to the book
@@ -13,7 +13,7 @@ From your fork of this repository, you can generate your own version of the book
 
 ### Setting up the virtual environment
 
-The virtual environment specifications are defined in the [`environment.yml`]() file. If you have not set up the conda environment, navigate to your `Git-Tutorial` repository folder in your terminal on your local machine and execute the following two commands. If you have already created the conda environment, then simply activate it using the second command below (skip the first command).
+The virtual environment specifications are defined in the [`environment.yml`](environment.yml) file. If you have not set up the conda environment, navigate to your `Git-Tutorial` repository folder in your terminal on your local machine and execute the following two commands. If you have already created the conda environment, then simply activate it using the second command below (skip the first command).
 
 ```bash
 conda env create -f environment.yml
@@ -45,4 +45,4 @@ jb clean --all ./book
 
 ## Notes
 
-Put notes here.
+This repository is actively maintained and contributions are welcome. The most helpful contributions usually improve tutorial clarity, correct command examples, add beginner-friendly explanations, or expand the hands-on workflow chapters.
