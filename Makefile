@@ -1,7 +1,10 @@
-.PHONY: book serve
+.PHONY: book serve clean
 
 book:
-	cd book && uv run jupyter book clean --all --yes && uv run jupyter book build --html
+	cd book && uv run jupyter book build --html
 
 serve:
-	cd book && uv run jupyter book clean --all --yes && uv run jupyter book build --site && uv run jupyter book start
+	cd book && uv run jupyter book start
+
+clean:
+	cd book && uv run jupyter book clean --all --yes
