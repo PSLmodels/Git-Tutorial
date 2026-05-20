@@ -10,14 +10,16 @@ project:
   github: PSLmodels/Git-Tutorial
   bibliography:
     - _bibliography/references.bib
+  numbering:
+    title: true
   toc:
     - file: content/intro.md
-    - title: Git and GitHub Background and History
+    - file: content/background/index.md
       children:
         - file: content/background/VCgitHistory.md
         - file: content/background/GitHubHistory.md
         - file: content/background/GoogleDropboxBox.md
-    - title: Using Git and GitHub
+    - file: content/using/index.md
       children:
         - file: content/using/installing_git.md
         - file: content/using/git_config.md
@@ -29,17 +31,17 @@ project:
         - file: content/using/Attribution.md
         - file: content/using/AdvancedGit.md
         - file: content/using/GitCheatSheet.md
-    - title: Open Source Repository Management
+    - file: content/repomgt/index.md
       children:
         - file: content/repomgt/license.md
         - file: content/repomgt/testing_CI.md
         - file: content/repomgt/documentation.md
         - file: content/repomgt/virt_env.md
-    - title: Text Editor Git Configuration
+    - file: content/txteditor/index.md
       children:
         - file: content/txteditor/TextEditorsIntro.md
         - file: content/txteditor/VScode.md
-    - title: Appendix
+    - file: content/appendix/index.md
       children:
         - file: content/glossary.md
 
