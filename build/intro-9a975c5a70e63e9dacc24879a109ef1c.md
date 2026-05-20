@@ -1,3 +1,7 @@
+---
+numbering: false
+---
+
 (chap_intro)=
 # Git and GitHub Tutorial Introduction
 

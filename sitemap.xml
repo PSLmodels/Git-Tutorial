@@ -5,6 +5,9 @@
     <loc>http://localhost:3000</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/index-1</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/vcgithistory</loc>
   </url>
   <url>
@@ -12,6 +15,9 @@
   </url>
   <url>
     <loc>http://localhost:3000/googledropboxbox</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/index-2</loc>
   </url>
   <url>
     <loc>http://localhost:3000/installing-git</loc>
@@ -44,6 +50,9 @@
     <loc>http://localhost:3000/gitcheatsheet</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/index-3</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/license</loc>
   </url>
   <url>
@@ -56,10 +65,16 @@
     <loc>http://localhost:3000/virt-env</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/index-4</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/texteditorsintro</loc>
   </url>
   <url>
     <loc>http://localhost:3000/vscode</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/index-5</loc>
   </url>
   <url>
     <loc>http://localhost:3000/glossary</loc>
