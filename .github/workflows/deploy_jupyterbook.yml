@@ -27,6 +27,9 @@ jobs:
         env:
           BASE_URL: /Git-Tutorial
 
+      - name: Add .nojekyll
+        run: touch book/_build/html/.nojekyll
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
