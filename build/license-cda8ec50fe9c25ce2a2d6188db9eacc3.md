@@ -3,6 +3,16 @@
 
 Choosing a license is one of the most important early decisions for an open-source repository. A license tells other people what they are allowed to do with the code and what obligations come with that use.
 
+## License used by this project
+
+The Git Tutorial project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0).
+
+The copyright notice for the project should read:
+
+`Copyright (c) 2026, PSLmodels/Git-Tutorial contributors`
+
+This is a more restrictive license than permissive software licenses such as BSD or MIT because it requires attribution, limits use to non-commercial purposes, and requires adapted versions to be shared under the same license terms.
+
 ## Why a license matters
 
 Without a license, a public GitHub repository may be visible, but others usually do not have clear legal permission to reuse, modify, or redistribute the code.
@@ -27,6 +37,10 @@ These licenses are often chosen when the project wants to maximize downstream ad
 ### Copyleft licenses
 
 Copyleft licenses such as GPL require derivative works to remain under compatible open-source terms when distributed. These licenses are often chosen when maintainers want changes to remain open in downstream redistributions.
+
+### Creative Commons licenses
+
+Creative Commons licenses are more commonly used for documentation, books, and other written or creative works than for software source code. A license such as CC BY-NC-SA 4.0 allows sharing and adaptation with attribution, restricts commercial use, and requires derivatives to use the same license.
 
 ## Questions maintainers should ask
 
