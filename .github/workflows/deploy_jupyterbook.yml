@@ -24,6 +24,8 @@ jobs:
 
       - name: Build book
         run: make book
+        env:
+          BASE_URL: /Git-Tutorial
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
