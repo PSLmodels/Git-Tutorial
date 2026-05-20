@@ -1,21 +1,232 @@
 (chap_workflow)=
 # Git and GitHub Collaborative Workflow
 
-Git and GitHub can be a lot to wrap one's head around at the beginning.  There's a lot of new jargon and one can get lost thinking about the various places that version of the files of kept (locally, in the `origin` repo, in the `upstream` repo).  To help with this, we'll step through the typical GitHub workflow followed by most projects in the Policy Simulation Library.  Throughout this, we'll reference the diagram below, which provides a visual representation of the GitHub workflow described. 
+Git and GitHub can feel confusing at first because you are managing changes in more than one place at the same time: your working files, your local Git history, your fork on GitHub, and the main repository maintained by a project. The goal of this chapter is to slow that process down and show the standard fork-and-pull-request workflow used by many repositories in the Policy Simulation Library (PSLmodels) organization.
+
+Throughout this chapter, we refer to the main project repository as `upstream` and your personal fork as `origin`.
 
 ![Git Diagram](GitFlowDiag.png)
 
-We begin assuming that you have installed and configured Git on  your machine and setup a GitHub account.  Now assume that you want to start working with a project at `https://github.com/PSLmodels/project`.  The step-by-step approach to this is as follows:
+## The workflow at a glance
 
-1. Make a fork of the main repository.  To do this, you navigate to the GitHub repository of the project, `https://github.com/PSLmodels/project` and click "Fork" in the top right of the screen.  Select the destination for the fork (which you will probably want to be your GitHub profile).  This will create a copy of the project on the Internet at `https://github.com/yourname/project`.  We will refer to `https://github.com/PSLmodels/project` as the "upstream" repository and your fork, `https://github.com/yourname/project`, as the "origin" repository.
-2. Make a copy of the new fork on your local machine.  To do this, you will click on the green "Code" button on the webpage of your fork.  Copy that url that is shown there.  Next, open your command prompt/terminal on your computer and navigate to a directory where you would like to save this repository.  Once there, type `git clone https://github.com/username/project.git`, where the url is what you just copied and pasted into your terminal.  Hit "return" and you will see the files being downloaded onto your computer into a new folder called `project`.  Now you have a copy of all the files for the project on your computer and are ready to work with them.
-3. Once ready to start editing files, we'll want to create a new branch to work on.  Note that once you cloned the repository, one branch was created, this one is called `master` (or `main`).  We want to keep the `master`/`main` branch synced to the upstream repository, ensuring that it has tested, working code.  We can create a new branch off of the `master` branch by (1) ensuring we are on the `master` branch with the command `git checkout master` and then (2) checking out a new branch with `git checkout -b new_branch_name`.
-4. If sometime has gone by since we got files from the upstream branch, we can check to make sure we have the latest files by doing a `git fetch upstream`.
-5. After fetching the changes, we can add them to our local files with the command `git merge upstream/master`.
-6. If changes were found, we can also sync our remote fork with a `git push origin branch_name`.
-7. Once we make edits to local files, we will want to add our changes to the Git history.  We do this by `git add path/filename`.
-8. After adding our changes to the history, we will want to commit them so that they are included in our next push to the remote repository.  Do this by `git commit path/filename`.
-9. When we have made some set of changes, we may want to push them to our remote fork to (1) back them up, (2) more easily share them with others, and/or (3) to set up a Pull Request to change the code in the upstream repository.  Do do this, we'll do `git push origin new_branch_name`.
-10. After we've made all the changes we want to the code base (which may entail cycling through steps 4-9 several times), we will want to open a pull request.  The easiest way to do this is to navigate to the upstream repo at `https://github.com/PSLmodels/project`, then click on the "Pull requests" tab.  If you have pushed your changes to your origin, you should see a green button that says "Compare & pull request".  Click then to open a pull request.  Enter a descriptive title and more description in the dialogue box below. This will help project maintainers understand and review your code changes.  If everything looks good, it'll get merged into the code base.  If not, maintainers will offer helpful feedback to address any issues and you can revise the code by committing and pushing new changes as in steps 7-9.
+In most PSLmodels repositories, a new contributor follows this cycle:
 
+1. Fork the upstream repository on GitHub.
+2. Clone the fork to your computer.
+3. Add the upstream repository as a second remote.
+4. Keep your local `main` branch synchronized with `upstream/main`.
+5. Create a feature branch for your work.
+6. Make changes, stage them, and commit them locally.
+7. Push the branch to your fork on GitHub.
+8. Open a pull request from your branch to the upstream repository.
+9. Respond to review comments by adding more commits to the same branch.
+10. After the pull request is merged, update your local `main` branch and delete the temporary feature branch.
 
+## Step 1: Fork the main repository
+
+Suppose you want to contribute to `https://github.com/PSLmodels/project`.
+
+Go to that repository on GitHub and click the "Fork" button. GitHub will create a copy of the repository under your own account, for example:
+
+* upstream repository: `https://github.com/PSLmodels/project`
+* your fork: `https://github.com/yourname/project`
+
+Your fork gives you a place where you can push branches even if you do not have direct write access to the upstream repository.
+
+## Step 2: Clone your fork
+
+Open a terminal and move to a directory where you want the project to live. Then clone your fork:
+
+```bash
+git clone https://github.com/yourname/project.git
+cd project
+```
+
+At this point, Git has already created one remote for you:
+
+```bash
+git remote -v
+```
+
+That remote is usually named `origin`, and it points to your fork.
+
+## Step 3: Add the upstream remote
+
+Because you cloned your fork rather than the main PSLmodels repository, you still need to tell Git where the upstream project lives:
+
+```bash
+git remote add upstream https://github.com/PSLmodels/project.git
+git remote -v
+```
+
+After this, you should see both `origin` and `upstream`.
+
+```{admonition} Why this matters
+:class: note
+Beginners often think `origin` is a special word that means "the main repository." It does not. `origin` is simply the default name Git gives to the remote you cloned from. In a fork-based workflow, `origin` is usually your fork and `upstream` is the main project repository.
+```
+
+## Step 4: Keep local `main` synchronized with upstream
+
+Before starting new work, update your local `main` branch so that it matches the latest tested code from the main project.
+
+```bash
+git checkout main
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+Some older repositories may still use `master` instead of `main`. If so, replace `main` with `master` in the commands above.
+
+Many contributors prefer `git pull --ff-only upstream main` instead of separate `fetch` and `merge` commands. Both approaches are fine once you understand what they do. We separate them here because it makes the sequence easier to understand.
+
+## Step 5: Create a feature branch
+
+Do not work directly on `main`. Create a branch for the change you want to make:
+
+```bash
+git checkout -b fix-typo-intro
+```
+
+Choose a branch name that briefly describes the task. Good names make it easier for reviewers and for your future self to understand what the branch is for.
+
+## Step 6: Edit, inspect, stage, and commit
+
+Now make your changes in the files you want to update. While working, use `git status` often:
+
+```bash
+git status
+```
+
+When you are ready to record part of your work, stage the relevant file changes:
+
+```bash
+git add path/to/file
+```
+
+Then commit the staged changes:
+
+```bash
+git commit -m "Clarify glossary definitions for branch and commit"
+```
+
+You can repeat the cycle of edit, `git add`, and `git commit` as many times as needed.
+
+```{admonition} A commit records staged changes
+:class: tip
+The most common beginner mistake here is to think that `git commit` takes a file path. Normally it does not. First stage files with `git add`, then create the commit with `git commit -m "message"`.
+```
+
+## Step 7: Push the branch to your fork
+
+Once your branch contains commits you want backed up or reviewed, push it to your fork:
+
+```bash
+git push origin fix-typo-intro
+```
+
+The first time you push a new branch, GitHub will usually show a banner offering to open a pull request.
+
+## Step 8: Open a pull request
+
+Open the pull request from your branch on your fork to the upstream repository's main branch.
+
+In practice, this usually means:
+
+* base repository: `PSLmodels/project`
+* base branch: `main`
+* compare repository: `yourname/project`
+* compare branch: `fix-typo-intro`
+
+Write a PR title that states the change clearly. In the description, explain:
+
+* what you changed
+* why you changed it
+* anything a reviewer should pay special attention to
+
+If the repository has a PR template, fill it out carefully. That template usually reflects the maintainers' expectations.
+
+## Step 9: Respond to review and CI feedback
+
+Opening the pull request is not the end of the process. In most collaborative repositories, three things happen next.
+
+### Review comments
+
+Maintainers or other contributors may ask questions or request revisions. Make those changes locally on the same branch, then commit and push again:
+
+```bash
+git add path/to/file
+git commit -m "Address PR feedback on workflow example"
+git push origin fix-typo-intro
+```
+
+The pull request updates automatically.
+
+### Automated tests
+
+Many repositories run continuous integration checks on every pull request. These checks might run unit tests, style checks, builds, or documentation validation. If a CI check fails, inspect the failure and update your branch until the checks pass.
+
+### Keeping the branch current
+
+If the upstream repository changes while your PR is open, you may need to update your branch:
+
+```bash
+git checkout main
+git fetch upstream
+git merge upstream/main
+git checkout fix-typo-intro
+git merge main
+```
+
+More advanced contributors may prefer rebasing here, but merging `main` into your feature branch is often simpler for beginners.
+
+## Step 10: After the pull request is merged
+
+Once your PR is merged, clean up your local repository.
+
+First, update your local `main` branch:
+
+```bash
+git checkout main
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+Then delete the feature branch locally:
+
+```bash
+git branch -d fix-typo-intro
+```
+
+You can also delete the branch from your fork on GitHub, either through the GitHub interface or with:
+
+```bash
+git push origin --delete fix-typo-intro
+```
+
+## What PSLmodels-style workflow is trying to protect
+
+This workflow may seem elaborate for a one-line fix, but each part serves a purpose.
+
+* Forks let anyone propose changes without giving everyone write access to the main repository.
+* Branches isolate one task from another.
+* Pull requests create a clear place for review and discussion.
+* CI checks help catch bugs before they reach the default branch.
+* Keeping `main` clean ensures you always have a reliable branch to build from.
+
+Those safeguards are especially valuable in research and policy-model repositories, where code, documentation, and results often need to be reproducible and carefully reviewed.
+
+## Common beginner mistakes
+
+The following problems happen often and are normal parts of learning Git.
+
+* Working directly on `main` instead of a feature branch.
+* Forgetting to add the `upstream` remote.
+* Committing too many unrelated changes together.
+* Pushing to the wrong branch.
+* Opening a PR from `main` instead of from the feature branch.
+* Trying to fix a failed CI check on GitHub without reproducing the problem locally.
+
+The next chapters cover some of these topics in more detail, especially merge conflicts and pull request discussions.
