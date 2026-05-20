@@ -102,7 +102,7 @@ So the Git source code is openly published, but the method of outside collaborat
 
 ## History of Git: Why Git Became This
 
-The standard *Pro Git* book {cite}`ChaconStraub2020` has a chapter entitled, "[A Short History of Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)". But a more recent article by Favell (2020) {cite}`Favell2020` entitled, "[The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)," goes into more detail about Git's rise from the early 2000's to the present. We also like Brown's (2018) article {cite}`Brown2018`, "A Git Origin Story." But one also needs to know a little bit about the [history of the Linux](https://en.wikipedia.org/wiki/History_of_Linux) {term}`open source` operating system {cite}`LinuxWiki2020` to appreciate its important role in the history of Git. The short history we present here is a synopsis that highlights why Git has the features and following that it does. We are tryin to give you evidence that you should make the investment to become a Git master.
+The standard *Pro Git* book {cite}`ChaconStraub2020` has a chapter entitled, "[A Short History of Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)". But a more recent article by Favell (2020) {cite}`Favell2020` entitled, "[The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)," goes into more detail about Git's rise from the early 2000s to the present. We also like Brown's (2018) article {cite}`Brown2018`, "A Git Origin Story." But one also needs to know a little bit about the [history of Linux](https://en.wikipedia.org/wiki/History_of_Linux), the {term}`open source` operating system {cite}`LinuxWiki2020`, to appreciate its important role in the history of Git. The short history we present here is a synopsis that highlights why Git has the features and following that it does. We are trying to give you evidence that the investment required to learn Git is worthwhile.
 
 Early in the Favell (2020) article {cite}`Favell2020`, he gives the following strong evidence of Git's current dominance in the VCS ({term}`version control system`) field.
 
@@ -114,7 +114,7 @@ In 1991, Linus Torvalds posted an initial version of a free operating system on 
 
 By the late 1990s, development of the Linux kernel as a viable operating system for broad use had greatly matured, and the number of developers and contributors had multiplied. The community of Linux developers were committed to keeping the kernel's source code {term}`open source`, but the scaling of the number of collaborators was being limited by the {term}`version control system`s being used at the time, such as CVS and Subversion.
 
-By 2000, some of the Linux developers were using a new {term}`source code management service` and accompanying version constrol system, BitKeeper {cite}`BitKeeperWiki2020`, because they offered free code hosting. But the software for the BitKeeper VCS tools was proprietary, which made some of the core Linux developers uncomfortable given the Linux open source license and ethic. But in 2020, Torvalds prevailed on much of the community to host the main {term}`repository` of the Linux source code with BitKeeper, which was a DVCS. The rationale was that the efficiencies from a mature DVCS platform would outweigh any conflict with proprietary versus open source licenses.
+By 2000, some of the Linux developers were using a new {term}`source code management service` and accompanying version control system, BitKeeper {cite}`BitKeeperWiki2020`, because it offered free code hosting. But the software for the BitKeeper VCS tools was proprietary, which made some of the core Linux developers uncomfortable given the Linux open source license and ethic. By 2002, Torvalds had prevailed on much of the community to host the main {term}`repository` of the Linux source code with BitKeeper, which was a DVCS. The rationale was that the efficiencies from a mature DVCS platform would outweigh any conflict with proprietary versus open source licenses.
 
 
 ### Linux development with BitKeeper: 2002 to 2005
@@ -127,7 +127,7 @@ It is worth noting the BitKeeper pioneered the {term}`distributed version contro
 * Simple design
 * Strong support for non-linear development (thousands of parallel {term}`branch`es)
 * Fully distributed
-* Able to handle large projects like the Linux kernel efficiently (spped and data size)
+* Able to handle large projects like the Linux kernel efficiently (speed and data size)
 * Include very strong safeguards against corruption, either accidental or malicious
 
 
