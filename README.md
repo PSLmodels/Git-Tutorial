@@ -1,7 +1,7 @@
 [![PSL incubating](https://img.shields.io/badge/PSL-incubating-ff69b4.svg)](https://www.PSLmodels.org)
 
 # <img src="https://raw.githubusercontent.com/PSLmodels/Git-Tutorial/master/book/_static/logo/jb_git_tutorial_logo.png" width=40 /> Git and GitHub Use, Collaboration, and Workflow
-This repository houses the source code and content files for the open access, *Git and GitHub Use, Collaboration, and Workflow* book tutorial and training used by many contributors in the [PSLmodels](https://github.com/PSLmodels) community. This project uses [Jupyter Book](https://jupyterbook.org/intro.html) to create the published HTML version of the tutorial. The source lives in this GitHub repository, and the compiled book is available at [https://pslmodels.github.io/Git-Tutorial](https://pslmodels.github.io/Git-Tutorial). This project is maintained by [Richard W. Evans](https://sites.google.com/site/rickecon/) and [Jason DeBacker](https://www.jasondebacker.com/).
+This repository houses the source code and content files for the open access, *Git and GitHub Use, Collaboration, and Workflow* book tutorial and training used by many contributors in the [PSLmodels](https://github.com/PSLmodels) community. This project uses [Jupyter Book](https://jupyterbook.org/intro.html) and MyST to create the published HTML version of the tutorial. The source lives in this GitHub repository, and the compiled book is available at [https://pslmodels.github.io/Git-Tutorial](https://pslmodels.github.io/Git-Tutorial). This project is maintained by [Richard W. Evans](https://sites.google.com/site/rickecon/) and [Jason DeBacker](https://www.jasondebacker.com/).
 
 
 ## Contributing to the book
@@ -23,16 +23,17 @@ conda activate jb-git-tutorial
 
 ### Building a Jupyter Book
 
-Run the following command in your terminal:
+Run the following command in your terminal from the `book` directory:
 
 ```bash
-jb build ./book
+cd book
+jupyter book build --all
 ```
 
 If you would like to work with a clean build, you can empty the build folder by running:
 
 ```bash
-jb clean ./book
+jupyter book clean
 ```
 
 If jupyter execution is cached, this command will not delete the cached folder.
@@ -40,7 +41,7 @@ If jupyter execution is cached, this command will not delete the cached folder.
 To remove the build folder (including `cached` executables), you can run:
 
 ```bash
-jb clean --all ./book
+jupyter book clean --all
 ```
 
 ## Notes
