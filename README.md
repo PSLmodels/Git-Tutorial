@@ -8,41 +8,29 @@ This repository houses the source code and content files for the open access, *G
 
 We welcome contributions and updates to the content of the book. This is done by following fork/edit/pull-request workflow.
 
-From your fork of this repository, you can generate your own version of the book by creating and activating a customized conda environment (virtual environment) and using the Jupyter Book build commands.
+From your fork of this repository, you can generate your own version of the book by syncing the `uv` environment and using the Jupyter Book build commands.
 
 
-### Setting up the virtual environment
+### Setting up the environment
 
-The virtual environment specifications are defined in the [`environment.yml`](environment.yml) file. If you have not set up the conda environment, navigate to your `Git-Tutorial` repository folder in your terminal on your local machine and execute the following two commands. If you have already created the conda environment, then simply activate it using the second command below (skip the first command).
+This project uses [`uv`](https://docs.astral.sh/uv/) for dependency management. If you do not already have `uv` installed, follow the official installation instructions in the `uv` documentation.
+
+Once `uv` is installed, navigate to your local `Git-Tutorial` repository folder and sync the project dependencies with:
 
 ```bash
-conda env create -f environment.yml
-conda activate jb-git-tutorial
+uv sync
 ```
 
 
 ### Building a Jupyter Book
 
-Run the following command in your terminal from the `book` directory:
+Run the following command in your terminal from the repository root:
 
 ```bash
-cd book
-jupyter book build --all
+make book
 ```
 
-If you would like to work with a clean build, you can empty the build folder by running:
-
-```bash
-jupyter book clean
-```
-
-If jupyter execution is cached, this command will not delete the cached folder.
-
-To remove the build folder (including `cached` executables), you can run:
-
-```bash
-jupyter book clean --all
-```
+The `book` target first removes the existing Jupyter Book build artifacts and then performs a fresh site build using `uv run jupyter book build --all`.
 
 ## Notes
 

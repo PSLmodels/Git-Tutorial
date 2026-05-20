@@ -6,20 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v6
         with:
-          activate-environment: jb-git-tutorial
-          environment-file: environment.yml
           python-version: 3.13
-          auto-activate-base: false
+          enable-cache: true
 
-      - name: Build # Build Jupyter Book
-        shell: bash -l {0}
-        run: |
-          cd book
-          jupyter-book build
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Build book
+        run: make book
