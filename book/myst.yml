@@ -42,7 +42,6 @@ project:
     - title: Appendix
       children:
         - file: content/glossary.md
-        - file: content/bibliography.md
 
 site:
   template: book-theme
