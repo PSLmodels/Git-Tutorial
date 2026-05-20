@@ -71,6 +71,7 @@ profile_default/
 ipython_config.py
 
 # Jupyter Book files
+_build/
 */_build/
 
 # Other files that I don't remember why we have

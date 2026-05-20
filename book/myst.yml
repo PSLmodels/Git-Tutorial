@@ -8,6 +8,8 @@ project:
     - name: Richard W. Evans
     - name: Jason DeBacker
   github: PSLmodels/Git-Tutorial
+  bibliography:
+    - _bibliography/references.bib
   toc:
     - file: content/intro.md
     - title: Git and GitHub Background and History
