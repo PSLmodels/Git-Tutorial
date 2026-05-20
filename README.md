@@ -32,6 +32,13 @@ make book
 
 The `book` target first removes the existing Jupyter Book build artifacts and then performs a fresh site build using `uv run jupyter book build --all`.
 
+You can run the `make serve` command to do all the steps from `make book`, but further initiate a local server on which you can view, check, and validate the functioning web site.
+
+```bash
+make serve
+```
+
+
 ## Notes
 
 This repository is actively maintained and contributions are welcome. The most helpful contributions usually improve tutorial clarity, correct command examples, add beginner-friendly explanations, or expand the hands-on workflow chapters.
